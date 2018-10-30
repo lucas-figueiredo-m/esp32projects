@@ -51,9 +51,9 @@ src/bootloader_init.o: \
  /opt/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h \
+ /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /opt/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
- /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /opt/esp/esp-idf/components/bootloader_support/include/bootloader_random.h \
  /opt/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_config.h \
  /opt/esp/esp-idf/components/bootloader_support/include/bootloader_clock.h \
@@ -161,11 +161,11 @@ src/bootloader_init.o: \
 
 /opt/esp/esp-idf/components/bootloader_support/include/esp_flash_encrypt.h:
 
+/opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
+
 /opt/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h:
 
 /opt/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
-
-/opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /opt/esp/esp-idf/components/bootloader_support/include/bootloader_random.h:
 

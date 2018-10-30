@@ -92,7 +92,6 @@ emac_main.o: /opt/esp/esp-idf/components/ethernet/emac_main.c \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
- /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -329,8 +328,6 @@ emac_main.o: /opt/esp/esp-idf/components/ethernet/emac_main.c \
 /opt/esp/esp-idf/components/esp32/include/xtensa/config/system.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
-
-/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

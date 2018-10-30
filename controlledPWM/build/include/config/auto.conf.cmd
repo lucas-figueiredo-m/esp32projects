@@ -16,7 +16,6 @@ deps_config := \
 	/opt/esp/esp-idf/components/lwip/Kconfig \
 	/opt/esp/esp-idf/components/mbedtls/Kconfig \
 	/opt/esp/esp-idf/components/mdns/Kconfig \
-	/opt/esp/esp-idf/components/mqtt/Kconfig \
 	/opt/esp/esp-idf/components/openssl/Kconfig \
 	/opt/esp/esp-idf/components/pthread/Kconfig \
 	/opt/esp/esp-idf/components/spi_flash/Kconfig \
@@ -24,6 +23,7 @@ deps_config := \
 	/opt/esp/esp-idf/components/tcpip_adapter/Kconfig \
 	/opt/esp/esp-idf/components/vfs/Kconfig \
 	/opt/esp/esp-idf/components/wear_levelling/Kconfig \
+	/opt/esp/esp-idf/Kconfig.compiler \
 	/opt/esp/esp-idf/components/bootloader/Kconfig.projbuild \
 	/opt/esp/esp-idf/components/esptool_py/Kconfig.projbuild \
 	/opt/esp/esp32projects/controlledPWM/main/Kconfig.projbuild \
@@ -33,8 +33,5 @@ deps_config := \
 include/config/auto.conf: \
 	$(deps_config)
 
-ifneq "$(IDF_CMAKE)" "n"
-include/config/auto.conf: FORCE
-endif
 
 $(deps_config): ;

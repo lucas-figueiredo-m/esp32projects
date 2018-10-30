@@ -35,7 +35,7 @@ lwip/src/netif/ppp/chap-md5.o: \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /opt/esp/esp-idf/components/esp32/include/esp_task.h \
- /opt/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/controlledPWM/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/esp_system.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -178,7 +178,7 @@ lwip/src/netif/ppp/chap-md5.o: \
 
 /opt/esp/esp-idf/components/esp32/include/esp_task.h:
 
-/opt/esp/esp-idf/examples/get-started/blink/build/include/sdkconfig.h:
+/opt/esp/esp32projects/controlledPWM/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_system.h:
 

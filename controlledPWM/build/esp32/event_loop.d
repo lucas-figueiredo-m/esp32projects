@@ -103,7 +103,6 @@ event_loop.o: /opt/esp/esp-idf/components/esp32/event_loop.c \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /opt/esp/esp-idf/components/esp32/include/esp_task.h \
- /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -340,8 +339,6 @@ event_loop.o: /opt/esp/esp-idf/components/esp32/event_loop.c \
 /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_task.h:
-
-/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

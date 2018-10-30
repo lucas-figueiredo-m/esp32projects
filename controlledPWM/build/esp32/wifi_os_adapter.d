@@ -114,7 +114,6 @@ wifi_os_adapter.o: /opt/esp/esp-idf/components/esp32/wifi_os_adapter.c \
  /opt/esp/esp-idf/components/newlib/include/sys/stat.h \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
- /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -381,8 +380,6 @@ wifi_os_adapter.o: /opt/esp/esp-idf/components/esp32/wifi_os_adapter.c \
 /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h:
 
 /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h:
-
-/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

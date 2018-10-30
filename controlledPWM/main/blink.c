@@ -140,10 +140,11 @@ void adcReadTask(void *pvParameter)
 
 void pwmControlTask(void *pvParameter)
 {
-    int ch, adcRead;
+    //int ch;
+    int adcRead;
 
     ledc_timer_config_t ledc_timer = {
-        .duty_resolution = LEDC_TIMER_12_BIT,  // resolution of PWM duty
+        .duty_resolution = LEDC_TIMER_10_BIT,  // resolution of PWM duty
         .freq_hz = 20000,                      // frequency of PWM signal
         .speed_mode = LEDC_HS_MODE,            // timer mode
         .timer_num = LEDC_HS_TIMER             // timer index
@@ -162,7 +163,7 @@ void pwmControlTask(void *pvParameter)
             .timer_sel  = LEDC_HS_TIMER
         },
 
-        {
+       /*{
             .channel    = LEDC_HS_CH1_CHANNEL,
             .duty       = 128,
             .gpio_num   = LEDC_HS_CH1_GPIO,
@@ -200,24 +201,26 @@ void pwmControlTask(void *pvParameter)
             .gpio_num   = LEDC_HS_CH5_GPIO,
             .speed_mode = LEDC_HS_MODE,
             .timer_sel  = LEDC_HS_TIMER
-        },
+        },*/
 
     };
-
+/*
     for (ch = 0; ch < LEDC_TEST_CH_NUM; ch++) 
     {
         ledc_channel_config(&ledc_channel[ch]);
-    }
+    }*/
 
     // Initialize fade service.
     //ledc_fade_func_install(0);
+    ledc_channel_config(&ledc_channel[0]);
 
     while (1) 
     {
         if(xQueueReceive(xQueueReadings, &adcRead, 50/portTICK_PERIOD_MS))
         {
             printf("\nReading Successfull\n");
-            ledc_channel[0].duty = adcRead;
+            ledc_set_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel, adcRead);
+            ledc_update_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel);
         }
 /*
         printf("1. LEDC fade up to duty = %d\n", LEDC_TEST_DUTY);
@@ -227,31 +230,8 @@ void pwmControlTask(void *pvParameter)
             ledc_fade_start(ledc_channel[ch].speed_mode,
                     ledc_channel[ch].channel, LEDC_FADE_NO_WAIT);
         }
-        vTaskDelay(LEDC_TEST_FADE_TIME / portTICK_PERIOD_MS);
-
-        printf("2. LEDC fade down to duty = 0\n");
-        for (ch = 0; ch < LEDC_TEST_CH_NUM; ch++) {
-            ledc_set_fade_with_time(ledc_channel[ch].speed_mode,
-                    ledc_channel[ch].channel, 0, LEDC_TEST_FADE_TIME);
-            ledc_fade_start(ledc_channel[ch].speed_mode,
-                    ledc_channel[ch].channel, LEDC_FADE_NO_WAIT);
-        }
-        vTaskDelay(LEDC_TEST_FADE_TIME / portTICK_PERIOD_MS);
-
-        printf("3. LEDC set duty = %d without fade\n", LEDC_TEST_DUTY);
-        for (ch = 0; ch < LEDC_TEST_CH_NUM; ch++) {
-            ledc_set_duty(ledc_channel[ch].speed_mode, ledc_channel[ch].channel, LEDC_TEST_DUTY);
-            ledc_update_duty(ledc_channel[ch].speed_mode, ledc_channel[ch].channel);
-        }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-
-        printf("4. LEDC set duty = 0 without fade\n");
-        for (ch = 0; ch < LEDC_TEST_CH_NUM; ch++) {
-            ledc_set_duty(ledc_channel[ch].speed_mode, ledc_channel[ch].channel, 0);
-            ledc_update_duty(ledc_channel[ch].speed_mode, ledc_channel[ch].channel);
-        }
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
-    }*/
+        vTaskDelay(LEDC_TEST_FADE_TIME / portTICK_PERIOD_MS);*/
+    }
 
 }
 
@@ -260,5 +240,5 @@ void app_main(void)
 {
     xQueueReadings = xQueueCreate(10, sizeof(int));
     xTaskCreate(&adcReadTask, "adcReadTask", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
-    xTaskCreate(&pwmControlTask, "pwmControlTask", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
+    xTaskCreate(&pwmControlTask, "pwmControlTask", 10000, NULL, 5, NULL);
 }

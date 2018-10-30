@@ -1,6 +1,6 @@
 pm_trace.o: /opt/esp/esp-idf/components/esp32/pm_trace.c \
  /opt/esp/esp-idf/components/esp32/pm_trace.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/driver/include/driver/gpio.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
@@ -44,7 +44,7 @@ pm_trace.o: /opt/esp/esp-idf/components/esp32/pm_trace.c \
 
 /opt/esp/esp-idf/components/esp32/pm_trace.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/driver/include/driver/gpio.h:
 

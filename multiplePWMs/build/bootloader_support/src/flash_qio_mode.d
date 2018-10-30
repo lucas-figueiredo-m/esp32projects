@@ -6,7 +6,7 @@ src/flash_qio_mode.o: \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/bootloader_support/include_bootloader/flash_qio_mode.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -53,7 +53,7 @@ src/flash_qio_mode.o: \
 
 /opt/esp/esp-idf/components/log/include/esp_log.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

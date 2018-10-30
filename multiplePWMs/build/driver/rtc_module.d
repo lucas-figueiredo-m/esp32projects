@@ -23,7 +23,7 @@ rtc_module.o: /opt/esp/esp-idf/components/driver/rtc_module.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -152,7 +152,7 @@ rtc_module.o: /opt/esp/esp-idf/components/driver/rtc_module.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 

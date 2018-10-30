@@ -27,7 +27,7 @@ event_default_handlers.o: \
  /opt/esp/esp-idf/components/newlib/include/sys/sched.h \
  /opt/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
@@ -104,6 +104,7 @@ event_default_handlers.o: \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /opt/esp/esp-idf/components/esp32/include/esp_task.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -186,7 +187,7 @@ event_default_handlers.o: \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 
@@ -339,6 +340,8 @@ event_default_handlers.o: \
 /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_task.h:
+
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

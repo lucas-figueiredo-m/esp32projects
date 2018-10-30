@@ -3,7 +3,7 @@ src/flash_encrypt.o: \
  /opt/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
  /opt/esp/esp-idf/components/bootloader_support/include/bootloader_random.h \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_image_format.h \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
@@ -46,7 +46,7 @@ src/flash_encrypt.o: \
 
 /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/bootloader_support/include/bootloader_random.h:
 

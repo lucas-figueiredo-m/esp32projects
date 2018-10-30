@@ -1,7 +1,7 @@
 port/net_sockets.o: \
  /opt/esp/esp-idf/components/mbedtls/port/net_sockets.c \
  /opt/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
  /opt/esp/esp-idf/components/newlib/include/newlib.h \
@@ -98,6 +98,7 @@ port/net_sockets.o: \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -143,7 +144,7 @@ port/net_sockets.o: \
 
 /opt/esp/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
 
@@ -336,6 +337,8 @@ port/net_sockets.o: \
 /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
+
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

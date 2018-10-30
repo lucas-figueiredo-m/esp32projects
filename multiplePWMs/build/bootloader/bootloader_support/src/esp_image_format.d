@@ -10,7 +10,7 @@ src/esp_image_format.o: \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /opt/esp/esp-idf/components/esp32/include/esp_flash_data_types.h \
- /opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -42,7 +42,7 @@ src/esp_image_format.o: \
 
 /opt/esp/esp-idf/components/esp32/include/esp_flash_data_types.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/bootloader_support/include/esp_secure_boot.h:
 

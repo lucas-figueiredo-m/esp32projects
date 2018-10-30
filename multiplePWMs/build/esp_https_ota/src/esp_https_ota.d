@@ -29,7 +29,7 @@ src/esp_https_ota.o: \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -83,7 +83,6 @@ src/esp_https_ota.o: \
  /opt/esp/esp-idf/components/nghttp/port/include/http_parser.h \
  /opt/esp/esp-idf/components/app_update/include/esp_ota_ops.h \
  /opt/esp/esp-idf/components/spi_flash/include/esp_partition.h \
- /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/log/include/esp_log_internal.h
@@ -146,7 +145,7 @@ src/esp_https_ota.o: \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -253,8 +252,6 @@ src/esp_https_ota.o: \
 /opt/esp/esp-idf/components/app_update/include/esp_ota_ops.h:
 
 /opt/esp/esp-idf/components/spi_flash/include/esp_partition.h:
-
-/opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 

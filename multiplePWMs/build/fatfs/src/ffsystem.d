@@ -10,7 +10,7 @@ src/ffsystem.o: /opt/esp/esp-idf/components/fatfs/src/ffsystem.c \
  /opt/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /opt/esp/esp-idf/components/newlib/include/machine/endian.h \
  /opt/esp/esp-idf/components/newlib/include/machine/param.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/newlib/include/sys/reent.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -107,7 +107,7 @@ src/ffsystem.o: /opt/esp/esp-idf/components/fatfs/src/ffsystem.c \
 
 /opt/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

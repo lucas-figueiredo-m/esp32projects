@@ -22,7 +22,7 @@ bt.o: /opt/esp/esp-idf/components/bt/bt.c \
  /opt/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /opt/esp/esp-idf/components/newlib/include/string.h \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -150,7 +150,7 @@ bt.o: /opt/esp/esp-idf/components/bt/bt.c \
 
 /opt/esp/esp-idf/components/newlib/include/sys/string.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/heap/include/esp_heap_caps.h:
 

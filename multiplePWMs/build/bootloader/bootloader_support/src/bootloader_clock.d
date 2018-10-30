@@ -13,7 +13,7 @@ src/bootloader_clock.o: \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
  /opt/esp/esp-idf/components/esp32/include/esp_dport_access.h \
- /opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtruntime.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -54,7 +54,7 @@ src/bootloader_clock.o: \
 
 /opt/esp/esp-idf/components/esp32/include/esp_dport_access.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 

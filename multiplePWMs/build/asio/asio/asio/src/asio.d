@@ -3,7 +3,7 @@ asio/asio/src/asio.o: \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/impl/src.hpp \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/detail/config.hpp \
  /opt/esp/esp-idf/components/asio/port/include/esp_asio_config.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/error.hpp \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/error_code.hpp \
@@ -55,6 +55,7 @@ asio/asio/src/asio.o: \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -325,7 +326,7 @@ asio/asio/src/asio.o: \
 
 /opt/esp/esp-idf/components/asio/port/include/esp_asio_config.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp:
 
@@ -428,6 +429,8 @@ asio/asio/src/asio.o: \
 /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
+
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

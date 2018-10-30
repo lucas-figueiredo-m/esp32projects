@@ -1,5 +1,5 @@
 ledc_example_main.o: \
- /opt/esp/esp32Projects/multiplePWMs/main/ledc_example_main.c \
+ /opt/esp/esp32projects/multiplePWMs/main/ledc_example_main.c \
  /opt/esp/esp-idf/components/newlib/include/stdio.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
  /opt/esp/esp-idf/components/newlib/include/newlib.h \
@@ -22,7 +22,7 @@ ledc_example_main.o: \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -131,7 +131,7 @@ ledc_example_main.o: \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -258,4 +258,4 @@ ledc_example_main.o: \
 /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
-/opt/esp/esp32Projects/multiplePWMs/main/./ledc_example_main.c:
+/opt/esp/esp32projects/multiplePWMs/main/./ledc_example_main.c:

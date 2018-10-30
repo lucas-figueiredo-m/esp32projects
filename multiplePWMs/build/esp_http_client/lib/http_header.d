@@ -27,7 +27,7 @@ lib/http_header.o: \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -38,7 +38,8 @@ lib/http_header.o: \
  /opt/esp/esp-idf/components/esp32/include/rom/queue.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h \
- /opt/esp/esp-idf/components/newlib/include/sys/time.h
+ /opt/esp/esp-idf/components/newlib/include/sys/time.h \
+ /opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -94,7 +95,7 @@ lib/http_header.o: \
 
 /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
+/opt/esp/esp32projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -117,4 +118,6 @@ lib/http_header.o: \
 /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h:
 
 /opt/esp/esp-idf/components/newlib/include/sys/time.h:
+
+/opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h:
 /opt/esp/esp-idf/components/esp_http_client/lib/http_header.c:

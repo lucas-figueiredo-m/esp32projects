@@ -1,6 +1,6 @@
 src/secure_boot_signatures.o: \
  /opt/esp/esp-idf/components/bootloader_support/src/secure_boot_signatures.c \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/bootloader/../include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
  /opt/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
@@ -19,7 +19,7 @@ src/secure_boot_signatures.o: \
  /opt/esp/esp-idf/components/micro-ecc/micro-ecc/uECC.h \
  /opt/esp/esp-idf/components/esp32/include/rom/sha.h
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_flash.h:
 

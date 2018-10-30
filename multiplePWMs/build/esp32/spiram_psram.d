@@ -1,5 +1,5 @@
 spiram_psram.o: /opt/esp/esp-idf/components/esp32/spiram_psram.c \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/string.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
  /opt/esp/esp-idf/components/newlib/include/newlib.h \
@@ -75,7 +75,7 @@ spiram_psram.o: /opt/esp/esp-idf/components/esp32/spiram_psram.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/spi_struct.h \
  /opt/esp/esp-idf/components/driver/include/driver/periph_ctrl.h
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/string.h:
 

@@ -4,7 +4,7 @@ pcnt.o: /opt/esp/esp-idf/components/driver/pcnt.c \
  /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /opt/esp/esp-idf/components/newlib/include/sys/features.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -99,7 +99,7 @@ pcnt.o: /opt/esp/esp-idf/components/driver/pcnt.c \
 
 /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

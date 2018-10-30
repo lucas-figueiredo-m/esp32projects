@@ -20,7 +20,7 @@ heap_caps_init.o: /opt/esp/esp-idf/components/heap/heap_caps_init.c \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -128,7 +128,7 @@ heap_caps_init.o: /opt/esp/esp-idf/components/heap/heap_caps_init.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

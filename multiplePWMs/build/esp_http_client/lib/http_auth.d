@@ -31,7 +31,7 @@ lib/http_auth.o: \
  /opt/esp/esp-idf/components/esp32/include/rom/queue.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/esp32/include/esp_interface.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h \
@@ -192,7 +192,7 @@ lib/http_auth.o: \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 

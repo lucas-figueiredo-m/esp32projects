@@ -2,7 +2,7 @@ src/bootloader_init.o: \
  /opt/esp/esp-idf/components/bootloader_support/src/bootloader_init.c \
  /opt/esp/esp-idf/components/esp32/include/esp_attr.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/bootloader/../include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -63,7 +63,7 @@ src/bootloader_init.o: \
 
 /opt/esp/esp-idf/components/log/include/esp_log.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

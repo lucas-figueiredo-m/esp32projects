@@ -8,7 +8,7 @@ library/ssl_stack.o: \
  /opt/esp/esp-idf/components/openssl/include/internal/x509_vfy.h \
  /opt/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h \
  /opt/esp/esp-idf/components/openssl/include/platform/ssl_opt.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
  /opt/esp/esp-idf/components/esp32/include/esp_types.h \
  /opt/esp/esp-idf/components/newlib/include/sys/cdefs.h \
@@ -58,7 +58,7 @@ library/ssl_stack.o: \
 
 /opt/esp/esp-idf/components/openssl/include/platform/ssl_opt.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
 

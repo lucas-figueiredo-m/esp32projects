@@ -1,5 +1,5 @@
 termios.o: /opt/esp/esp-idf/components/newlib/termios.c \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/termios.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -19,7 +19,7 @@ termios.o: /opt/esp/esp-idf/components/newlib/termios.c \
  /opt/esp/esp-idf/components/newlib/include/sys/errno.h \
  /opt/esp/esp-idf/components/newlib/include/sys/reent.h
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/platform_include/sys/termios.h:
 

@@ -9,7 +9,7 @@ xtensa_init.o: /opt/esp/esp-idf/components/freertos/xtensa_init.c \
  /opt/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
@@ -59,7 +59,7 @@ xtensa_init.o: /opt/esp/esp-idf/components/freertos/xtensa_init.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

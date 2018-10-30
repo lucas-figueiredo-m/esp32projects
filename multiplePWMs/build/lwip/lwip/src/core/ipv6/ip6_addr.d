@@ -34,7 +34,7 @@ lwip/src/core/ipv6/ip6_addr.o: \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /opt/esp/esp-idf/components/esp32/include/esp_task.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/esp_system.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -180,7 +180,7 @@ lwip/src/core/ipv6/ip6_addr.o: \
 
 /opt/esp/esp-idf/components/esp32/include/esp_task.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_system.h:
 

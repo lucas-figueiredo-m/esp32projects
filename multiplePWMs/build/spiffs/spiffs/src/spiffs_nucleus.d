@@ -30,7 +30,7 @@ spiffs/src/spiffs_nucleus.o: \
  /opt/esp/esp-idf/components/newlib/include/unistd.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/unistd.h \
  /opt/esp/esp-idf/components/newlib/include/sys/unistd.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -100,7 +100,7 @@ spiffs/src/spiffs_nucleus.o: \
 
 /opt/esp/esp-idf/components/newlib/include/sys/unistd.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/log/include/esp_log.h:
 

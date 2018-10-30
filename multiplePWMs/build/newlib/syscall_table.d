@@ -41,7 +41,7 @@ syscall_table.o: /opt/esp/esp-idf/components/newlib/syscall_table.c \
  /opt/esp/esp-idf/components/vfs/include/esp_vfs.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -184,7 +184,7 @@ syscall_table.o: /opt/esp/esp-idf/components/newlib/syscall_table.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

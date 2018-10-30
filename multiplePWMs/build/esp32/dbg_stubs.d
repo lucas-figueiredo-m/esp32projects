@@ -24,7 +24,7 @@ dbg_stubs.o: /opt/esp/esp-idf/components/esp32/dbg_stubs.c \
  /opt/esp/esp-idf/components/newlib/include/sys/sched.h \
  /opt/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
@@ -86,7 +86,7 @@ dbg_stubs.o: /opt/esp/esp-idf/components/esp32/dbg_stubs.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

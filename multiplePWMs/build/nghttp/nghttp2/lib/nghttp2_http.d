@@ -44,7 +44,7 @@ nghttp2/lib/nghttp2_http.o: \
  /opt/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h \
  /opt/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h
 
@@ -136,7 +136,7 @@ nghttp2/lib/nghttp2_http.o: \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 

@@ -1,6 +1,6 @@
 src/bootloader_common.o: \
  /opt/esp/esp-idf/components/bootloader_support/src/bootloader_common.c \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/bootloader/../include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -28,7 +28,7 @@ src/bootloader_common.o: \
  /opt/esp/esp-idf/components/bootloader_support/include/esp_flash_partitions.h \
  /opt/esp/esp-idf/components/bootloader_support/include_bootloader/bootloader_sha.h
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/bootloader/../include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_err.h:
 

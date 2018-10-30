@@ -3,7 +3,7 @@ asio/asio/src/asio.o: \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/impl/src.hpp \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/detail/config.hpp \
  /opt/esp/esp-idf/components/asio/port/include/esp_asio_config.h \
- /opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h \
+ /opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/error.hpp \
  /opt/esp/esp-idf/components/asio/asio/asio/include/asio/error_code.hpp \
@@ -325,7 +325,7 @@ asio/asio/src/asio.o: \
 
 /opt/esp/esp-idf/components/asio/port/include/esp_asio_config.h:
 
-/opt/esp/esp-idf/examples/peripherals/ledc/build/include/sdkconfig.h:
+/opt/esp/esp32Projects/multiplePWMs/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/asio/asio/asio/include/asio/impl/error.ipp:
 

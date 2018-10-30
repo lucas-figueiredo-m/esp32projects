@@ -35,8 +35,27 @@
  */
 #define LEDC_HS_TIMER          LEDC_TIMER_0
 #define LEDC_HS_MODE           LEDC_HIGH_SPEED_MODE
-#define LEDC_HS_CH0_GPIO       (2)
+
+#define LEDC_HS_CH0_GPIO       (19)
 #define LEDC_HS_CH0_CHANNEL    LEDC_CHANNEL_0
+
+#define LEDC_HS_CH1_GPIO       (18)
+#define LEDC_HS_CH1_CHANNEL    LEDC_CHANNEL_1
+
+#define LEDC_HS_CH2_GPIO       (5)
+#define LEDC_HS_CH2_CHANNEL    LEDC_CHANNEL_2
+
+#define LEDC_HS_CH3_GPIO       (17)
+#define LEDC_HS_CH3_CHANNEL    LEDC_CHANNEL_3
+
+#define LEDC_HS_CH4_GPIO       (16)
+#define LEDC_HS_CH4_CHANNEL    LEDC_CHANNEL_4
+
+#define LEDC_HS_CH5_GPIO       (4)
+#define LEDC_HS_CH5_CHANNEL    LEDC_CHANNEL_5
+
+
+
 /*#define LEDC_HS_CH1_GPIO       (19)
 #define LEDC_HS_CH1_CHANNEL    LEDC_CHANNEL_1
 
@@ -50,11 +69,11 @@
 #define LEDC_TEST_CH_NUM       (4)
 #define LEDC_TEST_DUTY         (4000)
 #define LEDC_TEST_FADE_TIME    (3000)*/
-#define LEDC_TEST_CH_NUM       (4)
+#define LEDC_TEST_CH_NUM       (6)
 
 void app_main()
 {
-    //int ch;
+    int ch;
 
     /*
      * Prepare and set configuration of timers
@@ -92,11 +111,53 @@ void app_main()
     ledc_channel_config_t ledc_channel[LEDC_TEST_CH_NUM] = {
         {
             .channel    = LEDC_HS_CH0_CHANNEL,
-            .duty       = 32,
+            .duty       = 64,
             .gpio_num   = LEDC_HS_CH0_GPIO,
             .speed_mode = LEDC_HS_MODE,
             .timer_sel  = LEDC_HS_TIMER
-        },/*
+        },
+
+        {
+            .channel    = LEDC_HS_CH1_CHANNEL,
+            .duty       = 128,
+            .gpio_num   = LEDC_HS_CH1_GPIO,
+            .speed_mode = LEDC_HS_MODE,
+            .timer_sel  = LEDC_HS_TIMER
+        },
+
+        {
+            .channel    = LEDC_HS_CH2_CHANNEL,
+            .duty       = 256,
+            .gpio_num   = LEDC_HS_CH2_GPIO,
+            .speed_mode = LEDC_HS_MODE,
+            .timer_sel  = LEDC_HS_TIMER
+        },
+
+        {
+            .channel    = LEDC_HS_CH3_CHANNEL,
+            .duty       = 512,
+            .gpio_num   = LEDC_HS_CH3_GPIO,
+            .speed_mode = LEDC_HS_MODE,
+            .timer_sel  = LEDC_HS_TIMER
+        },
+
+        {
+            .channel    = LEDC_HS_CH4_CHANNEL,
+            .duty       = 1024,
+            .gpio_num   = LEDC_HS_CH4_GPIO,
+            .speed_mode = LEDC_HS_MODE,
+            .timer_sel  = LEDC_HS_TIMER
+        },
+
+        {
+            .channel    = LEDC_HS_CH5_CHANNEL,
+            .duty       = 2048,
+            .gpio_num   = LEDC_HS_CH5_GPIO,
+            .speed_mode = LEDC_HS_MODE,
+            .timer_sel  = LEDC_HS_TIMER
+        },
+
+        /*
         {
             .channel    = LEDC_HS_CH1_CHANNEL,
             .duty       = 0,
@@ -121,10 +182,11 @@ void app_main()
     };
 
     // Set LED Controller with previously prepared configuration
-    /*for (ch = 0; ch < LEDC_TEST_CH_NUM; ch++) {
+    for (ch = 0; ch < LEDC_TEST_CH_NUM; ch++) 
+    {
         ledc_channel_config(&ledc_channel[ch]);
-    }*/
-    ledc_channel_config(&ledc_channel[0]);
+    }
+    //ledc_channel_config(&ledc_channel[0]);
 
     // Initialize fade service.
     //ledc_fade_func_install(0);

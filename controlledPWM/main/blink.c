@@ -259,6 +259,6 @@ void pwmControlTask(void *pvParameter)
 void app_main(void)
 {
     xQueueReadings = xQueueCreate(10, sizeof(int));
-    xTaskCreate(&adcReadTask, "adcReadTask", 1000, NULL, 5, NULL);
-    xTaskCreate(&pwmControlTask, "pwmControlTask", 1000, NULL, 6, NULL);
+    xTaskCreate(&adcReadTask, "adcReadTask", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
+    xTaskCreate(&pwmControlTask, "pwmControlTask", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
 }

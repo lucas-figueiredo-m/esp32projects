@@ -21,7 +21,7 @@ static esp_adc_cal_characteristics_t *adc_chars;
 static const adc_channel_t channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
 static const adc_atten_t atten = ADC_ATTEN_DB_11;//at = 0
 static const adc_unit_t unit = ADC_UNIT_1;
-
+/*
 static void check_efuse()
 {
     //Check TP is burned into eFuse
@@ -48,12 +48,12 @@ static void print_char_val_type(esp_adc_cal_value_t val_type)
     } else {
         printf("Characterized using Default Vref\n");
     }
-}
+}*/
 
 void app_main()
 {
     //Check if Two Point or Vref are burned into eFuse
-    check_efuse();
+    //  check_efuse();
 
     //Configure ADC
     if (unit == ADC_UNIT_1) {
@@ -66,7 +66,7 @@ void app_main()
     //Characterize ADC
     adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
     esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
-    print_char_val_type(val_type);
+    //print_char_val_type(val_type);
 
     //Continuously sample ADC1
     while (1) {

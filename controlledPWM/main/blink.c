@@ -96,7 +96,7 @@ void adcReadTask(void *pvParameter)
 
     //Characterize ADC
     adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
-    //esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
+    esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
     //print_char_val_type(val_type);
 
     //Continuously sample ADC1
@@ -141,7 +141,7 @@ void adcReadTask(void *pvParameter)
 void pwmControlTask(void *pvParameter)
 {
     //int ch;
-    int adcRead;
+    uint32_t adcRead = 0;
 
     ledc_timer_config_t ledc_timer = {
         .duty_resolution = LEDC_TIMER_10_BIT,  // resolution of PWM duty
@@ -242,3 +242,5 @@ void app_main(void)
     xTaskCreate(&adcReadTask, "adcReadTask", configMINIMAL_STACK_SIZE, NULL, 5, NULL);
     xTaskCreate(&pwmControlTask, "pwmControlTask", 10000, NULL, 5, NULL);
 }
+
+// Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.

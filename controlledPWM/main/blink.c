@@ -46,20 +46,31 @@
 
 #define LEDC_TEST_CH_NUM       (6)
 
-#define DEFAULT_VREF    1300        //1100Use adc2_vref_to_gpio() to obtain a better estimate
-#define NO_OF_SAMPLES   64          //Multisampling
+#define DEFAULT_VREF    	   1300        //1100Use adc2_vref_to_gpio() to obtain a better estimate
+#define NO_OF_SAMPLES  		   64          //Multisampling
+
+#define adcResolution          ADC_WIDTH_BIT_11
 
 static esp_adc_cal_characteristics_t *adc_chars;
 static const adc_channel_t channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
 static const adc_atten_t atten = ADC_ATTEN_DB_11;//at = 0
 static const adc_unit_t unit = ADC_UNIT_1;
 
+/*
+	Resolução do PWM:  12 bits (4096)
+	Frequência Máxima: 19kHz
+
+	Resolução do PWM:  11 bits (2048)
+	Frequência Máxima: 38kHz
+
+*/
+
 QueueHandle_t xQueueReadings;
 
 ledc_timer_config_t ledc_timer = 
 {
-    .duty_resolution = LEDC_TIMER_10_BIT,  // resolution of PWM duty
-    .freq_hz = 20000,                      // frequency of PWM signal
+    .duty_resolution = LEDC_TIMER_11_BIT,  // resolution of PWM duty
+    .freq_hz = 38000,                      // frequency of PWM signal
     .speed_mode = LEDC_HS_MODE,            // timer mode
     .timer_num = LEDC_HS_TIMER             // timer index
 };
@@ -85,7 +96,7 @@ void adcReadTask(void *pvParameter)
     //Configure ADC
     if (unit == ADC_UNIT_1) 
     {
-        adc1_config_width(ADC_WIDTH_BIT_12);
+        adc1_config_width(adcResolution);
         adc1_config_channel_atten(channel, atten);
     } 
 
@@ -96,7 +107,7 @@ void adcReadTask(void *pvParameter)
 
     //Characterize ADC
     adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
-    esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, ADC_WIDTH_BIT_12, DEFAULT_VREF, adc_chars);
+    esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, adcResolution, DEFAULT_VREF, adc_chars);
     //print_char_val_type(val_type);
 
     //Continuously sample ADC1
@@ -114,7 +125,7 @@ void adcReadTask(void *pvParameter)
             else 
             {
                 int raw;
-                adc2_get_raw((adc2_channel_t)channel, ADC_WIDTH_BIT_12, &raw);
+                adc2_get_raw((adc2_channel_t)channel, adcResolution, &raw);
                 adc_reading += raw;
             }
         }

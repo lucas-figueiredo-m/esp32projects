@@ -38,7 +38,8 @@ lib/http_header.o: \
  /opt/esp/esp-idf/components/esp32/include/rom/queue.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h \
- /opt/esp/esp-idf/components/newlib/include/sys/time.h
+ /opt/esp/esp-idf/components/newlib/include/sys/time.h \
+ /opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -117,4 +118,6 @@ lib/http_header.o: \
 /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h:
 
 /opt/esp/esp-idf/components/newlib/include/sys/time.h:
+
+/opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h:
 /opt/esp/esp-idf/components/esp_http_client/lib/http_header.c:

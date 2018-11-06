@@ -85,6 +85,8 @@ port.o: /opt/esp/esp-idf/components/freertos/port.c \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
  /opt/esp/esp-idf/components/esp32/include/esp_panic.h \
+ /opt/esp/esp-idf/components/log/include/esp_log.h \
+ /opt/esp/esp-idf/components/log/include/esp_log_internal.h \
  /opt/esp/esp-idf/components/freertos/portmux_impl.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/portable.h \
  /opt/esp/esp-idf/components/freertos/portmux_impl.inc.h
@@ -260,6 +262,10 @@ port.o: /opt/esp/esp-idf/components/freertos/port.c \
 /opt/esp/esp-idf/components/freertos/include/freertos/list.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_panic.h:
+
+/opt/esp/esp-idf/components/log/include/esp_log.h:
+
+/opt/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 /opt/esp/esp-idf/components/freertos/portmux_impl.h:
 

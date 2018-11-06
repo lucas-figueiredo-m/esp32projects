@@ -79,7 +79,7 @@ rmt.o: /opt/esp/esp-idf/components/driver/rmt.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -253,7 +253,7 @@ rmt.o: /opt/esp/esp-idf/components/driver/rmt.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
+/opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 

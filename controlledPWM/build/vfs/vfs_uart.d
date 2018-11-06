@@ -113,7 +113,7 @@ vfs_uart.o: /opt/esp/esp-idf/components/vfs/vfs_uart.c \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h \
  /opt/esp/esp-idf/components/driver/include/driver/uart_select.h
 
@@ -345,7 +345,7 @@ vfs_uart.o: /opt/esp/esp-idf/components/vfs/vfs_uart.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
+/opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h:
 

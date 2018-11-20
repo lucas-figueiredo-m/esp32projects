@@ -101,6 +101,7 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /opt/esp/esp-idf/components/esp32/include/esp_task.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -130,6 +131,7 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /opt/esp/esp-idf/components/newlib/include/machine/endian.h \
  /opt/esp/esp-idf/components/newlib/include/machine/param.h \
+ /opt/esp/esp-idf/components/json/cJSON/cJSON.h \
  /opt/esp/esp-idf/components/http_server/include/http_server.h \
  /opt/esp/esp-idf/components/newlib/include/string.h \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
@@ -339,6 +341,8 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 
 /opt/esp/esp-idf/components/esp32/include/esp_task.h:
 
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
+
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:
@@ -396,6 +400,8 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 /opt/esp/esp-idf/components/newlib/include/machine/endian.h:
 
 /opt/esp/esp-idf/components/newlib/include/machine/param.h:
+
+/opt/esp/esp-idf/components/json/cJSON/cJSON.h:
 
 /opt/esp/esp-idf/components/http_server/include/http_server.h:
 

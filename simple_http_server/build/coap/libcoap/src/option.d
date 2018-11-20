@@ -38,7 +38,7 @@ libcoap/src/option.o: \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
  /opt/esp/esp-idf/components/esp32/include/esp_task.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/esp_system.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -77,6 +77,7 @@ libcoap/src/option.o: \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -206,7 +207,7 @@ libcoap/src/option.o: \
 
 /opt/esp/esp-idf/components/esp32/include/esp_task.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_system.h:
 
@@ -283,6 +284,8 @@ libcoap/src/option.o: \
 /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
+
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

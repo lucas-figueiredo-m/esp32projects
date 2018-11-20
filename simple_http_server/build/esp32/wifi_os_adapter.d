@@ -23,7 +23,7 @@ wifi_os_adapter.o: /opt/esp/esp-idf/components/esp32/wifi_os_adapter.c \
  /opt/esp/esp-idf/components/newlib/include/string.h \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
@@ -114,6 +114,7 @@ wifi_os_adapter.o: /opt/esp/esp-idf/components/esp32/wifi_os_adapter.c \
  /opt/esp/esp-idf/components/newlib/include/sys/stat.h \
  /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h \
  /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -199,7 +200,7 @@ wifi_os_adapter.o: /opt/esp/esp-idf/components/esp32/wifi_os_adapter.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 
@@ -380,6 +381,8 @@ wifi_os_adapter.o: /opt/esp/esp-idf/components/esp32/wifi_os_adapter.c \
 /opt/esp/esp-idf/components/vfs/include/sys/ioctl.h:
 
 /opt/esp/esp-idf/components/newlib/platform_include/sys/select.h:
+
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

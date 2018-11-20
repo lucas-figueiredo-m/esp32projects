@@ -23,7 +23,7 @@ port/esp_bignum.o: /opt/esp/esp-idf/components/mbedtls/port/esp_bignum.c \
  /opt/esp/esp-idf/components/newlib/include/machine/malloc.h \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
@@ -149,7 +149,7 @@ port/esp_bignum.o: /opt/esp/esp-idf/components/mbedtls/port/esp_bignum.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

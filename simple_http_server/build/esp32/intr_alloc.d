@@ -1,5 +1,5 @@
 intr_alloc.o: /opt/esp/esp-idf/components/esp32/intr_alloc.c \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /opt/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -83,7 +83,7 @@ intr_alloc.o: /opt/esp/esp-idf/components/esp32/intr_alloc.c \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/log/include/esp_log_internal.h
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdint.h:
 

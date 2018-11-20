@@ -16,7 +16,7 @@ dport_access.o: /opt/esp/esp-idf/components/esp32/dport_access.c \
  /opt/esp/esp-idf/components/newlib/include/sys/lock.h \
  /opt/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/esp_attr.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/newlib/include/stdio.h \
@@ -129,7 +129,7 @@ dport_access.o: /opt/esp/esp-idf/components/esp32/dport_access.c \
 
 /opt/esp/esp-idf/components/newlib/include/sys/string.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_attr.h:
 

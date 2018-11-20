@@ -1,5 +1,5 @@
 int_wdt.o: /opt/esp/esp-idf/components/esp32/int_wdt.c \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /opt/esp/esp-idf/components/newlib/include/sys/features.h \
@@ -90,7 +90,7 @@ int_wdt.o: /opt/esp/esp-idf/components/esp32/int_wdt.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /opt/esp/esp-idf/components/esp32/include/esp_int_wdt.h
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdint.h:
 

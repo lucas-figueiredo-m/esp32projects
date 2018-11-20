@@ -28,7 +28,7 @@ i2c.o: /opt/esp/esp-idf/components/driver/i2c.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
@@ -86,7 +86,7 @@ i2c.o: /opt/esp/esp-idf/components/driver/i2c.c \
  /opt/esp/esp-idf/components/freertos/include/freertos/task.h \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
@@ -156,7 +156,7 @@ i2c.o: /opt/esp/esp-idf/components/driver/i2c.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -272,7 +272,7 @@ i2c.o: /opt/esp/esp-idf/components/driver/i2c.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/list.h:
 
-/opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
+/opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 

@@ -31,7 +31,7 @@ nghttp2/lib/nghttp2_queue.o: \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h
 
 /opt/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_queue.h:
@@ -96,7 +96,7 @@ nghttp2/lib/nghttp2_queue.o: \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 /opt/esp/esp-idf/components/nghttp/nghttp2/lib/nghttp2_queue.c:

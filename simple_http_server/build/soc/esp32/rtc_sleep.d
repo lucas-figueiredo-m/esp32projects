@@ -6,7 +6,7 @@ esp32/rtc_sleep.o: /opt/esp/esp-idf/components/soc/esp32/rtc_sleep.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -61,7 +61,7 @@ esp32/rtc_sleep.o: /opt/esp/esp-idf/components/soc/esp32/rtc_sleep.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

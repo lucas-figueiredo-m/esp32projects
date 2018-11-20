@@ -11,7 +11,7 @@ library/ssl_lib.o: /opt/esp/esp-idf/components/openssl/library/ssl_lib.c \
  /opt/esp/esp-idf/components/openssl/include/internal/ssl_cert.h \
  /opt/esp/esp-idf/components/openssl/include/internal/ssl_dbg.h \
  /opt/esp/esp-idf/components/openssl/include/platform/ssl_opt.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/openssl/include/platform/ssl_port.h \
  /opt/esp/esp-idf/components/esp32/include/esp_types.h \
  /opt/esp/esp-idf/components/newlib/include/sys/cdefs.h \
@@ -69,7 +69,7 @@ library/ssl_lib.o: /opt/esp/esp-idf/components/openssl/library/ssl_lib.c \
 
 /opt/esp/esp-idf/components/openssl/include/platform/ssl_opt.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/openssl/include/platform/ssl_port.h:
 

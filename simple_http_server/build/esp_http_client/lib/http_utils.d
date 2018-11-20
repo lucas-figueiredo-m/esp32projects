@@ -25,10 +25,11 @@ lib/http_utils.o: \
  /opt/esp/esp-idf/components/newlib/include/sys/sched.h \
  /opt/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h \
- /opt/esp/esp-idf/components/newlib/include/sys/time.h
+ /opt/esp/esp-idf/components/newlib/include/sys/time.h \
+ /opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h
 
 /opt/esp/esp-idf/components/newlib/include/string.h:
 
@@ -80,11 +81,13 @@ lib/http_utils.o: \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 
 /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h:
 
 /opt/esp/esp-idf/components/newlib/include/sys/time.h:
+
+/opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h:
 /opt/esp/esp-idf/components/esp_http_client/lib/http_utils.c:

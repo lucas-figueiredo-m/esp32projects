@@ -24,7 +24,7 @@ cache_err_int.o: /opt/esp/esp-idf/components/esp32/cache_err_int.c \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -130,7 +130,7 @@ cache_err_int.o: /opt/esp/esp-idf/components/esp32/cache_err_int.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

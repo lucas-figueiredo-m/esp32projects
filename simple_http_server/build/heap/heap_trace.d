@@ -18,7 +18,7 @@ heap_trace.o: /opt/esp/esp-idf/components/heap/heap_trace.c \
  /opt/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /opt/esp/esp-idf/components/newlib/include/machine/endian.h \
  /opt/esp/esp-idf/components/newlib/include/machine/param.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/heap/include/esp_heap_trace.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
@@ -126,7 +126,7 @@ heap_trace.o: /opt/esp/esp-idf/components/heap/heap_trace.c \
 
 /opt/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/heap/include/esp_heap_trace.h:
 

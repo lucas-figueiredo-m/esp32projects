@@ -4,7 +4,7 @@ esp32/rtc_pm.o: /opt/esp/esp-idf/components/soc/esp32/rtc_pm.c \
  /opt/esp/esp-idf/components/newlib/include/sys/features.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -36,7 +36,7 @@ esp32/rtc_pm.o: /opt/esp/esp-idf/components/soc/esp32/rtc_pm.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

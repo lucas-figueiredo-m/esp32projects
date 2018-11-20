@@ -1,5 +1,5 @@
 stack_check.o: /opt/esp/esp-idf/components/esp32/stack_check.c \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/esp_system.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
@@ -58,7 +58,7 @@ stack_check.o: /opt/esp/esp-idf/components/esp32/stack_check.c \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_system.h:
 

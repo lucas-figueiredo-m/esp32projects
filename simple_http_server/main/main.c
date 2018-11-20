@@ -13,6 +13,7 @@
 #include <esp_system.h>
 #include <nvs_flash.h>
 #include <sys/param.h>
+#include "cJSON.h"
 
 #include <http_server.h>
 
@@ -29,11 +30,30 @@
 
 static const char *TAG="APP";
 
+char *jsonToString()
+{
+	cJSON *root;
+	char *rendered;
+
+	root = cJSON_CreateObject();
+
+	//cJSON_AddItemToObject(root, "name", cJSON_CreateString("example"));
+	//cJSON_AddItemToObject(root , "format", fmt = cJSON_CreateObject());
+	cJSON_AddStringToObject(root, "Cumprimento 1", "Hello World!");
+	cJSON_AddStringToObject(root, "Cumprimento 2", "Bom Dia");
+	rendered = cJSON_Print(root);
+
+	return rendered;
+}
+
+
 /* An HTTP GET handler */
 esp_err_t hello_get_handler(httpd_req_t *req)
 {
     char*  buf;
     size_t buf_len;
+
+    httpd_resp_set_type(req, HTTPD_TYPE_JSON);
 
     /* Get header value string length and allocate memory for length + 1,
      * extra byte for null termination */
@@ -93,7 +113,7 @@ esp_err_t hello_get_handler(httpd_req_t *req)
 
     /* Send response with custom headers and body set as the
      * string passed in user context*/
-    const char* resp_str = (const char*) req->user_ctx;
+    const char* resp_str = jsonToString();//(const char*) req->user_ctx;
     httpd_resp_send(req, resp_str, strlen(resp_str));
 
     /* After sending the HTTP response the old HTTP request
@@ -110,7 +130,7 @@ httpd_uri_t hello = {
     .handler   = hello_get_handler,
     /* Let's pass response string in user
      * context to demonstrate it's usage */
-    .user_ctx  = "Hello World!"
+    .user_ctx  = NULL
 };
 
 /* An HTTP POST handler */
@@ -267,6 +287,14 @@ static void initialise_wifi(void *arg)
 void app_main()
 {
     static httpd_handle_t server = NULL;
-    ESP_ERROR_CHECK(nvs_flash_init());
+    //ESP_ERROR_CHECK(nvs_flash_init());
+    esp_err_t ret = nvs_flash_init();
+    if(ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
+    {
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        ret = nvs_flash_init();
+    }
+
+    ESP_ERROR_CHECK(ret);
     initialise_wifi(&server);
 }

@@ -16,7 +16,7 @@ cache_utils.o: /opt/esp/esp-idf/components/spi_flash/cache_utils.c \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/newlib/include/string.h \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
@@ -129,7 +129,7 @@ cache_utils.o: /opt/esp/esp-idf/components/spi_flash/cache_utils.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 

@@ -1,7 +1,7 @@
 libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-ref.o: \
  /opt/esp/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-ref.c \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -33,7 +33,7 @@ libsodium/src/libsodium/crypto_generichash/blake2b/ref/blake2b-ref.o: \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

@@ -83,8 +83,8 @@ CONFIG_MONITOR_BAUD=115200
 #
 # Example Configuration
 #
-CONFIG_WIFI_SSID="lucas-notebook"
-CONFIG_WIFI_PASSWORD="uXESupX5"
+CONFIG_WIFI_SSID="Lucas"
+CONFIG_WIFI_PASSWORD="a1b2c3d4"
 
 #
 # Partition Table

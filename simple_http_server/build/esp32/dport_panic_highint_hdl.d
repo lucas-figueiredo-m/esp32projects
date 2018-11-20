@@ -14,7 +14,7 @@ dport_panic_highint_hdl.o: \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
  /opt/esp/esp-idf/components/esp32/include/esp_panic.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h
@@ -47,7 +47,7 @@ dport_panic_highint_hdl.o: \
 
 /opt/esp/esp-idf/components/esp32/include/esp_panic.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h:
 

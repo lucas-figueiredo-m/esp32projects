@@ -18,7 +18,7 @@ vfs.o: /opt/esp/esp-idf/components/vfs/vfs.c \
  /opt/esp/esp-idf/components/newlib/include/string.h \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/newlib/include/sys/errno.h \
  /opt/esp/esp-idf/components/newlib/include/sys/fcntl.h \
@@ -140,7 +140,7 @@ vfs.o: /opt/esp/esp-idf/components/vfs/vfs.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 

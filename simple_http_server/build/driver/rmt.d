@@ -22,7 +22,7 @@ rmt.o: /opt/esp/esp-idf/components/driver/rmt.c \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/hal.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core.h \
@@ -79,7 +79,7 @@ rmt.o: /opt/esp/esp-idf/components/driver/rmt.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
+ /opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/log/include/esp_log_internal.h \
@@ -139,7 +139,7 @@ rmt.o: /opt/esp/esp-idf/components/driver/rmt.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 
@@ -253,7 +253,7 @@ rmt.o: /opt/esp/esp-idf/components/driver/rmt.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
+/opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 

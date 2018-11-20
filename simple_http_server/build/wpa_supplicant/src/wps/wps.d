@@ -22,7 +22,7 @@ src/wps/wps.o: /opt/esp/esp-idf/components/wpa_supplicant/src/wps/wps.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
@@ -111,7 +111,7 @@ src/wps/wps.o: /opt/esp/esp-idf/components/wpa_supplicant/src/wps/wps.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

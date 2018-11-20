@@ -3,7 +3,7 @@ src/secure_boot.o: \
  /opt/esp/esp-idf/components/esp32/include/esp_attr.h \
  /opt/esp/esp-idf/components/esp32/include/esp_types.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/bootloader/../include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/bootloader/../include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -46,7 +46,7 @@ src/secure_boot.o: \
 
 /opt/esp/esp-idf/components/log/include/esp_log.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/bootloader/../include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

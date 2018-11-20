@@ -1,6 +1,6 @@
 pm_trace.o: /opt/esp/esp-idf/components/esp32/pm_trace.c \
  /opt/esp/esp-idf/components/esp32/pm_trace.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/driver/include/driver/gpio.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
@@ -44,7 +44,7 @@ pm_trace.o: /opt/esp/esp-idf/components/esp32/pm_trace.c \
 
 /opt/esp/esp-idf/components/esp32/pm_trace.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/driver/include/driver/gpio.h:
 

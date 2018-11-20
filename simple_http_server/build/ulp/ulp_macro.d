@@ -27,7 +27,7 @@ ulp_macro.o: /opt/esp/esp-idf/components/ulp/ulp_macro.c \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
@@ -95,7 +95,7 @@ ulp_macro.o: /opt/esp/esp-idf/components/ulp/ulp_macro.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 

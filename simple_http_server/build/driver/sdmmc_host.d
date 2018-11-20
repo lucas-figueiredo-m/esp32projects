@@ -11,7 +11,7 @@ sdmmc_host.o: /opt/esp/esp-idf/components/driver/sdmmc_host.c \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -122,7 +122,7 @@ sdmmc_host.o: /opt/esp/esp-idf/components/driver/sdmmc_host.c \
 
 /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 

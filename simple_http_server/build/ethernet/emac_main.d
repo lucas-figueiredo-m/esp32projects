@@ -28,7 +28,7 @@ emac_main.o: /opt/esp/esp-idf/components/ethernet/emac_main.c \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/esp32/include/rom/gpio.h \
  /opt/esp/esp-idf/components/esp32/include/esp_attr.h \
@@ -92,6 +92,7 @@ emac_main.o: /opt/esp/esp-idf/components/ethernet/emac_main.c \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -201,7 +202,7 @@ emac_main.o: /opt/esp/esp-idf/components/ethernet/emac_main.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 
@@ -328,6 +329,8 @@ emac_main.o: /opt/esp/esp-idf/components/ethernet/emac_main.c \
 /opt/esp/esp-idf/components/esp32/include/xtensa/config/system.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
+
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

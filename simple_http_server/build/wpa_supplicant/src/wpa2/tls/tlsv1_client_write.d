@@ -31,7 +31,7 @@ src/wpa2/tls/tlsv1_client_write.o: \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/assert.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
@@ -130,7 +130,7 @@ src/wpa2/tls/tlsv1_client_write.o: \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/assert.h:
 

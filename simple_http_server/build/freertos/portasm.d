@@ -12,7 +12,7 @@ portasm.o: /opt/esp/esp-idf/components/freertos/portasm.S \
  /opt/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/system.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
@@ -45,7 +45,7 @@ portasm.o: /opt/esp/esp-idf/components/freertos/portasm.S \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h:
 

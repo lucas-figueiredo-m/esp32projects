@@ -24,7 +24,7 @@ mdns_console.o: /opt/esp/esp-idf/components/mdns/mdns_console.c \
  /opt/esp/esp-idf/components/newlib/include/stdint.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
@@ -83,6 +83,7 @@ mdns_console.o: /opt/esp/esp-idf/components/mdns/mdns_console.c \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -174,7 +175,7 @@ mdns_console.o: /opt/esp/esp-idf/components/mdns/mdns_console.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -291,6 +292,8 @@ mdns_console.o: /opt/esp/esp-idf/components/mdns/mdns_console.c \
 /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
+
+/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 

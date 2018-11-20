@@ -18,7 +18,7 @@ random.o: /opt/esp/esp-idf/components/newlib/random.c \
  /opt/esp/esp-idf/components/newlib/include/machine/endian.h \
  /opt/esp/esp-idf/components/newlib/include/machine/param.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
  /opt/esp/esp-idf/components/newlib/include/sys/reent.h \
@@ -109,7 +109,7 @@ random.o: /opt/esp/esp-idf/components/newlib/random.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

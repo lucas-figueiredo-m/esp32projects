@@ -10,7 +10,7 @@ spi_flash_rom_patch.o: \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/gpio_pins.h \
  /opt/esp/esp-idf/components/esp32/include/rom/spi_flash.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/bootloader/../include/sdkconfig.h
+ /opt/esp/esp32projects/simple_http_server/build/bootloader/../include/sdkconfig.h
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -32,5 +32,5 @@ spi_flash_rom_patch.o: \
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/spi_reg.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/bootloader/../include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/bootloader/../include/sdkconfig.h:
 /opt/esp/esp-idf/components/spi_flash/./spi_flash_rom_patch.c:

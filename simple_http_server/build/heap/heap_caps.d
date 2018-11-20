@@ -15,7 +15,7 @@ heap_caps.o: /opt/esp/esp-idf/components/heap/heap_caps.c \
  /opt/esp/esp-idf/components/newlib/include/sys/cdefs.h \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
@@ -118,7 +118,7 @@ heap_caps.o: /opt/esp/esp-idf/components/heap/heap_caps.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 

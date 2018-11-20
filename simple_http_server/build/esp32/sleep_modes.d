@@ -27,7 +27,7 @@ sleep_modes.o: /opt/esp/esp-idf/components/esp32/sleep_modes.c \
  /opt/esp/esp-idf/components/newlib/include/sys/sched.h \
  /opt/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /opt/esp/esp-idf/components/newlib/platform_include/assert.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/newlib/include/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
  /opt/esp/esp-idf/components/newlib/include/alloca.h \
@@ -89,6 +89,10 @@ sleep_modes.o: /opt/esp/esp-idf/components/esp32/sleep_modes.c \
  /opt/esp/esp-idf/components/driver/include/driver/rtc_io.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/rtc_gpio_channel.h \
  /opt/esp/esp-idf/components/soc/include/soc/rtc_periph.h \
+ /opt/esp/esp-idf/components/driver/include/driver/uart.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h \
+ /opt/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -104,9 +108,14 @@ sleep_modes.o: /opt/esp/esp-idf/components/esp32/sleep_modes.c \
  /opt/esp/esp-idf/components/freertos/include/freertos/portbenchmark.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/mpu_wrappers.h \
  /opt/esp/esp-idf/components/esp32/include/esp_system.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/semphr.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/task.h \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/list.h
+ /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h
 
 /opt/esp/esp-idf/components/newlib/include/sys/lock.h:
 
@@ -164,7 +173,7 @@ sleep_modes.o: /opt/esp/esp-idf/components/esp32/sleep_modes.c \
 
 /opt/esp/esp-idf/components/newlib/platform_include/assert.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
 
@@ -288,6 +297,14 @@ sleep_modes.o: /opt/esp/esp-idf/components/esp32/sleep_modes.c \
 
 /opt/esp/esp-idf/components/soc/include/soc/rtc_periph.h:
 
+/opt/esp/esp-idf/components/driver/include/driver/uart.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/uart_struct.h:
+
+/opt/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
@@ -318,9 +335,19 @@ sleep_modes.o: /opt/esp/esp-idf/components/esp32/sleep_modes.c \
 
 /opt/esp/esp-idf/components/esp32/include/esp_system.h:
 
+/opt/esp/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
 /opt/esp/esp-idf/components/freertos/include/freertos/task.h:
 
 /opt/esp/esp-idf/components/newlib/include/limits.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/list.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+/opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/uart_channel.h:
 /opt/esp/esp-idf/components/esp32/./sleep_modes.c:

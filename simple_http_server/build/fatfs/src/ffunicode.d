@@ -10,7 +10,7 @@ src/ffunicode.o: /opt/esp/esp-idf/components/fatfs/src/ffunicode.c \
  /opt/esp/esp-idf/components/newlib/include/sys/syslimits.h \
  /opt/esp/esp-idf/components/newlib/include/machine/endian.h \
  /opt/esp/esp-idf/components/newlib/include/machine/param.h \
- /opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h \
+ /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /opt/esp/esp-idf/components/newlib/include/sys/reent.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -107,7 +107,7 @@ src/ffunicode.o: /opt/esp/esp-idf/components/fatfs/src/ffunicode.c \
 
 /opt/esp/esp-idf/components/newlib/include/machine/param.h:
 
-/opt/esp/esp-idf/examples/protocols/http_server/simple/build/include/sdkconfig.h:
+/opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 

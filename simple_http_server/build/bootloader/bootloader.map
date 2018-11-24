@@ -4,24 +4,24 @@ Archive member included to satisfy reference by file (symbol)
                               (call_start_cpu0)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_init)
-/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
-                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_clock_configure)
-/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_random_enable)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o) (bootloader_utility_load_partition_table)
-/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_mmap)
-/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
-                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_read_flash_id)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_common_ota_select_valid)
+/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_clock_configure)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (esp_partition_table_verify)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_load_image)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o) (bootloader_sha256_start)
+/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o) (bootloader_fill_random)
+/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o) (bootloader_mmap)
+/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                              /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o) (bootloader_read_flash_id)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o) (esp_log_early_timestamp)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
@@ -36,10 +36,10 @@ Archive member included to satisfy reference by file (symbol)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o) (rtc_clk_init)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o) (GPIO_PIN_MUX_REG)
-/opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
-                              /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_cal_ratio)
 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_32k_enable)
+/opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+                              /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_cal_ratio)
 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
                               /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
@@ -57,21 +57,68 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .xt.lit        0x0000000000000000       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .xt.prop       0x0000000000000000      0x5e8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .xt.lit        0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .xt.prop       0x0000000000000000       0x48 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xt.lit        0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .xt.prop       0x0000000000000000       0xe4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .xt.lit        0x0000000000000000       0x48 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .xt.prop       0x0000000000000000      0x57c /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .literal.bootloader_common_check_long_hold_gpio
+                0x0000000000000000       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .literal.bootloader_common_label_search
+                0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .literal.bootloader_common_erase_part_type_data
+                0x0000000000000000       0x60 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .literal.bootloader_common_get_sha256_of_partition
+                0x0000000000000000       0x34 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .text.bootloader_common_check_long_hold_gpio
+                0x0000000000000000       0xac /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .rodata.str1.4
+                0x0000000000000000      0x112 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .text.bootloader_common_label_search
+                0x0000000000000000       0xac /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .text.bootloader_common_erase_part_type_data
+                0x0000000000000000      0x126 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .text.bootloader_common_get_sha256_of_partition
+                0x0000000000000000       0xc7 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xt.lit        0x0000000000000000       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xt.prop       0x0000000000000000      0x36c /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .xt.lit        0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .xt.prop       0x0000000000000000       0x48 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xt.lit        0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .xt.prop       0x0000000000000000      0x144 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .literal.esp_image_verify
+                0x0000000000000000        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .literal.esp_image_verify_bootloader
+                0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text.esp_image_verify
+                0x0000000000000000       0x14 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .rodata        0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text.esp_image_verify_bootloader
+                0x0000000000000000       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xt.lit        0x0000000000000000       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .xt.prop       0x0000000000000000      0x750 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xt.lit        0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xt.prop       0x0000000000000000      0x24c /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xt.lit        0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xt.prop       0x0000000000000000       0xe4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .literal.bootloader_flash_write
                 0x0000000000000000       0x40 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .literal.bootloader_flash_erase_sector
@@ -138,53 +185,6 @@ Discarded input sections
                 0x0000000000000000       0x6c /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .xt.lit        0x0000000000000000       0x60 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .xt.prop       0x0000000000000000      0x300 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .literal.bootloader_common_check_long_hold_gpio
-                0x0000000000000000       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .literal.bootloader_common_label_search
-                0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .literal.bootloader_common_erase_part_type_data
-                0x0000000000000000       0x60 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .literal.bootloader_common_get_sha256_of_partition
-                0x0000000000000000       0x34 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .text.bootloader_common_check_long_hold_gpio
-                0x0000000000000000       0xac /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .rodata.str1.4
-                0x0000000000000000      0x112 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .text.bootloader_common_label_search
-                0x0000000000000000       0xac /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .text.bootloader_common_erase_part_type_data
-                0x0000000000000000      0x126 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .text.bootloader_common_get_sha256_of_partition
-                0x0000000000000000       0xc7 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .xt.lit        0x0000000000000000       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .xt.prop       0x0000000000000000      0x36c /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xt.lit        0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .xt.prop       0x0000000000000000      0x144 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .literal.esp_image_verify
-                0x0000000000000000        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .literal.esp_image_verify_bootloader
-                0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text.esp_image_verify
-                0x0000000000000000       0x14 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .rodata        0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text.esp_image_verify_bootloader
-                0x0000000000000000       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xt.lit        0x0000000000000000       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .xt.prop       0x0000000000000000      0x750 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xt.lit        0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .xt.prop       0x0000000000000000      0x24c /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .literal.esp_log_buffer_hex_internal
                 0x0000000000000000       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .literal.esp_log_buffer_char_internal
@@ -309,25 +309,10 @@ Discarded input sections
  .rodata.GPIO_PIN_MUX_REG
                 0x0000000000000000       0xa0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .xt.prop       0x0000000000000000        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .literal.rtc_clk_cal
-                0x0000000000000000        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .literal.rtc_time_us_to_slowclk
-                0x0000000000000000        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .literal.rtc_time_get
-                0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_clk_cal
-                0x0000000000000000       0x52 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_time_us_to_slowclk
-                0x0000000000000000       0x1f /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_time_slowclk_to_us
-                0x0000000000000000       0x1c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_time_get
-                0x0000000000000000       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.lit        0x0000000000000000       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.prop       0x0000000000000000      0x258 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .literal.rtc_clk_bbpll_disable
+                0x0000000000000000       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_bbpll_enable
+                0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_32k_enable_external
                 0x0000000000000000        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_32k_bootstrap
@@ -336,6 +321,8 @@ Discarded input sections
                 0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_apll_enable
                 0x0000000000000000       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_bbpll_configure
+                0x0000000000000000       0x3c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_from_mhz_internal
                 0x0000000000000000        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_from_mhz
@@ -348,6 +335,12 @@ Discarded input sections
                 0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_set_xtal
                 0x0000000000000000       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_to_pll_mhz
+                0x0000000000000000       0x38 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_to_8m
+                0x0000000000000000       0x2c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_set_config
+                0x0000000000000000       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_set
                 0x0000000000000000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_set_config_fast
@@ -357,6 +350,10 @@ Discarded input sections
  .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_bbpll_disable
+                0x0000000000000000       0x3e /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_bbpll_enable
+                0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_32k_enable_external
                 0x0000000000000000       0x12 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_32k_bootstrap
@@ -365,6 +362,8 @@ Discarded input sections
                 0x0000000000000000       0x1a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_apll_enable
                 0x0000000000000000      0x15a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_bbpll_configure
+                0x0000000000000000      0x18d /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_from_mhz_internal
                 0x0000000000000000       0x4c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_from_mhz
@@ -377,18 +376,51 @@ Discarded input sections
                 0x0000000000000000       0x1c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_set_xtal
                 0x0000000000000000       0x1f /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_to_pll_mhz
+                0x0000000000000000       0x8c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_to_8m
+                0x0000000000000000       0x66 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .text.rtc_clk_cpu_freq_set_config
+                0x0000000000000000       0x76 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_set
                 0x0000000000000000       0x17 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_set_config_fast
                 0x0000000000000000       0x36 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .text.rtc_clk_cpu_freq_set_fast
                 0x0000000000000000       0x17 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.__func__$3470
+                0x0000000000000000       0x1c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.__func__$3519
                 0x0000000000000000       0x1b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .rodata.__func__$3495
                 0x0000000000000000       0x17 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .bss.s_cur_pll_freq
+                0x0000000000000000        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xt.lit        0x0000000000000000      0x120 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xt.prop       0x0000000000000000      0xcfc /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cal
+                0x0000000000000000        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .literal.rtc_time_us_to_slowclk
+                0x0000000000000000        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .literal.rtc_time_get
+                0x0000000000000000       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .literal.rtc_clk_wait_for_slow_cycle
+                0x0000000000000000       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .data          0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .bss           0x0000000000000000        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_clk_cal
+                0x0000000000000000       0x52 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_time_us_to_slowclk
+                0x0000000000000000       0x1f /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_time_slowclk_to_us
+                0x0000000000000000       0x1c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_time_get
+                0x0000000000000000       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_clk_wait_for_slow_cycle
+                0x0000000000000000       0x79 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.lit        0x0000000000000000       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.prop       0x0000000000000000      0x258 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .data          0x0000000000000000        0x0 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .bss           0x0000000000000000        0x0 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .xt.lit        0x0000000000000000        0x8 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
@@ -582,7 +614,7 @@ END GROUP
  *fill*         0x000000004007870e        0x2 
  .text          0x0000000040078710      0x281 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
                 0x0000000040078710                __udivdi3
- *libbootloader_support.a:bootloader_common.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:bootloader_common.o(.literal .text .literal.* .text.*)
  *fill*         0x0000000040078991        0x3 
  .text.bootloader_common_ota_select_crc
                 0x0000000040078994       0x14 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
@@ -592,7 +624,7 @@ END GROUP
                                          0x24 (size before relaxing)
                 0x00000000400789a8                bootloader_common_ota_select_valid
  *fill*         0x00000000400789c8        0x0 
- *libbootloader_support.a:bootloader_flash.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:bootloader_flash.o(.literal .text .literal.* .text.*)
  .text.spi_to_esp_err
                 0x00000000400789c8       0x22 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *fill*         0x00000000400789ea        0x2 
@@ -621,7 +653,7 @@ END GROUP
  *fill*         0x0000000040078c2a        0x0 
  *fill*         0x0000000040078c2a        0x0 
  *fill*         0x0000000040078c2a        0x0 
- *libbootloader_support.a:bootloader_random.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:bootloader_random.o(.literal .text .literal.* .text.*)
  *fill*         0x0000000040078c2a        0x2 
  .text.bootloader_fill_random
                 0x0000000040078c2c       0x6a /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
@@ -638,7 +670,7 @@ END GROUP
  *fill*         0x0000000040078f8c        0x0 
  *fill*         0x0000000040078f8c        0x0 
  *fill*         0x0000000040078f8c        0x0 
- *libbootloader_support.a:bootloader_utility.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:bootloader_utility.o(.literal .text .literal.* .text.*)
  .text.log_invalid_app_partition
                 0x0000000040078f8c       0x57 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x5b (size before relaxing)
@@ -681,7 +713,7 @@ END GROUP
  *fill*         0x00000000400795b0        0x0 
  *fill*         0x00000000400795b0        0x0 
  *fill*         0x00000000400795b0        0x0 
- *libbootloader_support.a:bootloader_sha.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:bootloader_sha.o(.literal .text .literal.* .text.*)
  .text.bootloader_sha256_start
                 0x00000000400795b0       0x12 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                 0x00000000400795b0                bootloader_sha256_start
@@ -701,8 +733,8 @@ END GROUP
  .text.bootloader_sha256_hex_to_str
                 0x0000000040079744       0x72 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                 0x0000000040079744                bootloader_sha256_hex_to_str
- *libbootloader_support.a:efuse.*(.literal .text .literal.* .text.*)
- *libbootloader_support.a:esp_image_format.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:efuse.o(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:esp_image_format.o(.literal .text .literal.* .text.*)
  *fill*         0x00000000400797b6        0x2 
  .text.should_map
                 0x00000000400797b8       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
@@ -749,16 +781,16 @@ END GROUP
  *fill*         0x0000000040079ea8        0x0 
  *fill*         0x0000000040079ea8        0x0 
  *fill*         0x0000000040079ea8        0x0 
- *libbootloader_support.a:flash_encrypt.*(.literal .text .literal.* .text.*)
- *libbootloader_support.a:flash_partitions.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:flash_encrypt.o(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:flash_partitions.o(.literal .text .literal.* .text.*)
  .text.esp_partition_table_verify
                 0x0000000040079ea8      0x143 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x14f (size before relaxing)
                 0x0000000040079ea8                esp_partition_table_verify
- *libbootloader_support.a:secure_boot.*(.literal .text .literal.* .text.*)
- *libbootloader_support.a:secure_boot_signatures.*(.literal .text .literal.* .text.*)
- *libmicro-ecc.a:*.*(.literal .text .literal.* .text.*)
- *libspi_flash.a:*.*(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:secure_boot.o(.literal .text .literal.* .text.*)
+ *libbootloader_support.a:secure_boot_signatures.o(.literal .text .literal.* .text.*)
+ *libmicro-ecc.a:*.o(.literal .text .literal.* .text.*)
+ *libspi_flash.a:*.o(.literal .text .literal.* .text.*)
  *fill*         0x0000000040079feb        0x1 
  .text.esp_rom_spiflash_read_status
                 0x0000000040079fec       0x61 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
@@ -799,7 +831,7 @@ END GROUP
                 0x000000004007a4b0                _loader_text_end = ABSOLUTE (.)
                 0x000000004007a4b0                _etext = .
 
-.iram.text      0x0000000040080400     0x1bd7
+.iram.text      0x0000000040080400     0x17f8
                 0x0000000040080400                . = ALIGN (0x10)
  *(.entry.text)
  *(.init.literal)
@@ -887,335 +919,285 @@ END GROUP
                                          0x4c (size before relaxing)
  .literal.rtc_clk_init
                 0x000000004008065c       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
-                                         0xa0 (size before relaxing)
- .literal.rtc_clk_cal_internal
-                0x00000000400806ac       0x34 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
-                                         0x64 (size before relaxing)
- .literal.rtc_clk_cal_ratio
-                0x00000000400806e0        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
-                                          0x8 (size before relaxing)
- .literal.rtc_clk_wait_for_slow_cycle
-                0x00000000400806e0        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
-                                         0x20 (size before relaxing)
+                                         0x9c (size before relaxing)
  .literal.rtc_clk_32k_enable_common
-                0x00000000400806e8       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806ac       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x14 (size before relaxing)
- .literal.rtc_clk_bbpll_disable
-                0x00000000400806f8        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_bbpll_enable
-                0x0000000040080704        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x8 (size before relaxing)
  .literal.rtc_clk_32k_enable
-                0x0000000040080708        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806bc        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_8m_enable
-                0x000000004008070c        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806c0        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_8m_enabled
-                0x0000000040080714        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806c8        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_8md256_enabled
-                0x0000000040080714        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806c8        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_slow_freq_set
-                0x0000000040080714        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806c8        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_slow_freq_get
-                0x0000000040080718        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806cc        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_slow_freq_get_hz
-                0x0000000040080718        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806cc        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
  .literal.rtc_clk_fast_freq_set
-                0x0000000040080718        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806d4        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0xc (size before relaxing)
  .literal.rtc_clk_fast_freq_get
-                0x0000000040080718        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806d4        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
- .literal.rtc_clk_bbpll_configure
-                0x0000000040080718        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x3c (size before relaxing)
  .literal.rtc_clk_xtal_freq_get
-                0x0000000040080720        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806d4        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_cpu_freq_mhz_to_config
-                0x0000000040080724        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806d8        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x4 (size before relaxing)
  .literal.rtc_clk_cpu_freq_get_config
-                0x0000000040080724       0x14 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806d8       0x14 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x24 (size before relaxing)
  .literal.rtc_clk_xtal_freq_update
-                0x0000000040080738        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806ec        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_apb_freq_update
-                0x000000004008073c        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806f0        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_cpu_freq_to_xtal
-                0x0000000040080740        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400806f4        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x34 (size before relaxing)
- .literal.rtc_clk_cpu_freq_to_pll_mhz
-                0x000000004008074c       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x38 (size before relaxing)
- .literal.rtc_clk_cpu_freq_to_8m
-                0x000000004008075c        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x2c (size before relaxing)
- .literal.rtc_clk_cpu_freq_set_config
-                0x0000000040080760        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x30 (size before relaxing)
  .literal.rtc_clk_apb_freq_get
-                0x0000000040080760        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040080700        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                          0x10 (size before relaxing)
+ .literal.rtc_clk_cal_internal
+                0x0000000040080704       0x2c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+                                         0x64 (size before relaxing)
+ .literal.rtc_clk_cal_ratio
+                0x0000000040080730        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+                                          0x8 (size before relaxing)
  .text.selected_boot_partition
-                0x0000000040080764        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x0000000040080730        0xc /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x10 (size before relaxing)
  .text.select_partition_number
-                0x0000000040080770       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000004008073c       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x34 (size before relaxing)
  .text.call_start_cpu0
-                0x00000000400807a0       0x35 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
+                0x000000004008076c       0x35 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x3c (size before relaxing)
-                0x00000000400807a0                call_start_cpu0
- *fill*         0x00000000400807d5        0x3 
+                0x000000004008076c                call_start_cpu0
+ *fill*         0x00000000400807a1        0x3 
  .text.wdt_reset_cpu0_info_enable
-                0x00000000400807d8       0x27 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- *fill*         0x00000000400807ff        0x1 
+                0x00000000400807a4       0x27 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ *fill*         0x00000000400807cb        0x1 
  .text.wdt_reset_info_dump
-                0x0000000040080800       0xe6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- *fill*         0x00000000400808e6        0x2 
+                0x00000000400807cc       0xe6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ *fill*         0x00000000400808b2        0x2 
  .text.print_flash_info
-                0x00000000400808e8       0xf6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- *fill*         0x00000000400809de        0x2 
+                0x00000000400808b4       0xf6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ *fill*         0x00000000400809aa        0x2 
  .text.vddsdio_configure
-                0x00000000400809e0       0x33 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400809ac       0x33 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x37 (size before relaxing)
- *fill*         0x0000000040080a13        0x1 
+ *fill*         0x00000000400809df        0x1 
  .text.uart_console_configure
-                0x0000000040080a14       0x36 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x00000000400809e0       0x36 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x3a (size before relaxing)
- *fill*         0x0000000040080a4a        0x2 
+ *fill*         0x0000000040080a16        0x2 
  .text.wdt_reset_check
-                0x0000000040080a4c       0xa2 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080a18       0xa2 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0xae (size before relaxing)
- *fill*         0x0000000040080aee        0x2 
+ *fill*         0x0000000040080aba        0x2 
  .text.update_flash_config
-                0x0000000040080af0       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080abc       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .text.bootloader_main
-                0x0000000040080b58       0xe0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080b24       0xe0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                         0x128 (size before relaxing)
  .text.__assert_func
-                0x0000000040080c38       0x1f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080c04       0x1f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x23 (size before relaxing)
-                0x0000000040080c38                __assert_func
- *fill*         0x0000000040080c57        0x1 
+                0x0000000040080c04                __assert_func
+ *fill*         0x0000000040080c23        0x1 
  .text.bootloader_init
-                0x0000000040080c58      0x12a /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x0000000040080c24      0x12a /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                         0x136 (size before relaxing)
-                0x0000000040080c58                bootloader_init
- *fill*         0x0000000040080d82        0x2 
+                0x0000000040080c24                bootloader_init
+ *fill*         0x0000000040080d4e        0x2 
  .text.bootloader_clock_configure
-                0x0000000040080d84       0x6e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                0x0000000040080d50       0x6e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
                                          0x76 (size before relaxing)
-                0x0000000040080d84                bootloader_clock_configure
- *fill*         0x0000000040080df2        0x2 
+                0x0000000040080d50                bootloader_clock_configure
+ *fill*         0x0000000040080dbe        0x2 
  .text.execute_flash_command
-                0x0000000040080df4      0x190 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                0x0000000040080dc0      0x190 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .text.bootloader_read_flash_id
-                0x0000000040080f84       0x27 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                0x0000000040080f50       0x27 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
                                          0x2b (size before relaxing)
-                0x0000000040080f84                bootloader_read_flash_id
- *fill*         0x0000000040080fab        0x1 
+                0x0000000040080f50                bootloader_read_flash_id
+ *fill*         0x0000000040080f77        0x1 
  .text.rtc_wdt_get_protect_status
-                0x0000000040080fac       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040080fac                rtc_wdt_get_protect_status
- *fill*         0x0000000040080fc5        0x3 
+                0x0000000040080f78       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040080f78                rtc_wdt_get_protect_status
+ *fill*         0x0000000040080f91        0x3 
  .text.rtc_wdt_protect_off
-                0x0000000040080fc8       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040080fc8                rtc_wdt_protect_off
+                0x0000000040080f94       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040080f94                rtc_wdt_protect_off
  .text.rtc_wdt_protect_on
-                0x0000000040080fd8        0xf /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040080fd8                rtc_wdt_protect_on
- *fill*         0x0000000040080fe7        0x1 
+                0x0000000040080fa4        0xf /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040080fa4                rtc_wdt_protect_on
+ *fill*         0x0000000040080fb3        0x1 
  .text.rtc_wdt_enable
-                0x0000000040080fe8       0x2b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040080fe8                rtc_wdt_enable
- *fill*         0x0000000040081013        0x1 
+                0x0000000040080fb4       0x2b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040080fb4                rtc_wdt_enable
+ *fill*         0x0000000040080fdf        0x1 
  .text.rtc_wdt_set_time
-                0x0000000040081014       0x59 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040080fe0       0x59 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x5d (size before relaxing)
-                0x0000000040081014                rtc_wdt_set_time
- *fill*         0x000000004008106d        0x3 
+                0x0000000040080fe0                rtc_wdt_set_time
+ *fill*         0x0000000040081039        0x3 
  .text.rtc_wdt_set_stage
-                0x0000000040081070       0xb1 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040081070                rtc_wdt_set_stage
- *fill*         0x0000000040081121        0x3 
+                0x000000004008103c       0xb1 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004008103c                rtc_wdt_set_stage
+ *fill*         0x00000000400810ed        0x3 
  .text.rtc_wdt_disable
-                0x0000000040081124       0x6a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x00000000400810f0       0x6a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x7e (size before relaxing)
-                0x0000000040081124                rtc_wdt_disable
- *fill*         0x000000004008118e        0x2 
+                0x00000000400810f0                rtc_wdt_disable
+ *fill*         0x000000004008115a        0x2 
  .text.rtc_wdt_set_length_of_reset_signal
-                0x0000000040081190       0x69 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x0000000040081190                rtc_wdt_set_length_of_reset_signal
- *fill*         0x00000000400811f9        0x3 
+                0x000000004008115c       0x69 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004008115c                rtc_wdt_set_length_of_reset_signal
+ *fill*         0x00000000400811c5        0x3 
  .text.rtc_vddsdio_get_config
-                0x00000000400811fc      0x104 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
-                0x00000000400811fc                rtc_vddsdio_get_config
+                0x00000000400811c8      0x104 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x00000000400811c8                rtc_vddsdio_get_config
  .text.rtc_vddsdio_set_config
-                0x0000000040081300       0x46 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
-                0x0000000040081300                rtc_vddsdio_set_config
- *fill*         0x0000000040081346        0x2 
+                0x00000000400812cc       0x46 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
+                0x00000000400812cc                rtc_vddsdio_set_config
+ *fill*         0x0000000040081312        0x2 
  .text.rtc_clk_xtal_freq_estimate
-                0x0000000040081348       0xa6 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x0000000040081314       0xa6 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0xb2 (size before relaxing)
- *fill*         0x00000000400813ee        0x2 
+ *fill*         0x00000000400813ba        0x2 
  .text.rtc_clk_init
-                0x00000000400813f0      0x1d6 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
-                                        0x202 (size before relaxing)
-                0x00000000400813f0                rtc_clk_init
- *fill*         0x00000000400815c6        0x2 
+                0x00000000400813bc      0x1d2 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                                        0x1fa (size before relaxing)
+                0x00000000400813bc                rtc_clk_init
+ *fill*         0x000000004008158e        0x2 
+ .text.rtc_clk_32k_enable_common
+                0x0000000040081590       0x81 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x0000000040081611        0x3 
+ .text.rtc_clk_32k_enable
+                0x0000000040081614       0x2d /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081614                rtc_clk_32k_enable
+ *fill*         0x0000000040081641        0x3 
+ .text.rtc_clk_8m_enable
+                0x0000000040081644       0x9b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081644                rtc_clk_8m_enable
+ *fill*         0x00000000400816df        0x1 
+ .text.rtc_clk_8m_enabled
+                0x00000000400816e0       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400816e0                rtc_clk_8m_enabled
+ *fill*         0x00000000400816f9        0x3 
+ .text.rtc_clk_8md256_enabled
+                0x00000000400816fc       0x1a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400816fc                rtc_clk_8md256_enabled
+ *fill*         0x0000000040081716        0x2 
+ .text.rtc_clk_slow_freq_set
+                0x0000000040081718       0x48 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081718                rtc_clk_slow_freq_set
+ .text.rtc_clk_slow_freq_get
+                0x0000000040081760       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081760                rtc_clk_slow_freq_get
+ .text.rtc_clk_slow_freq_get_hz
+                0x0000000040081770       0x29 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081770                rtc_clk_slow_freq_get_hz
+ *fill*         0x0000000040081799        0x3 
+ .text.rtc_clk_fast_freq_set
+                0x000000004008179c       0x2a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004008179c                rtc_clk_fast_freq_set
+ *fill*         0x00000000400817c6        0x2 
+ .text.rtc_clk_fast_freq_get
+                0x00000000400817c8       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400817c8                rtc_clk_fast_freq_get
+ .text.rtc_clk_xtal_freq_get
+                0x00000000400817d8       0x35 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400817d8                rtc_get_xtal
+                0x00000000400817d8                rtc_clk_xtal_freq_get
+ *fill*         0x000000004008180d        0x3 
+ .text.rtc_clk_cpu_freq_mhz_to_config
+                0x0000000040081810       0x61 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081810                rtc_clk_cpu_freq_mhz_to_config
+ *fill*         0x0000000040081871        0x3 
+ .text.rtc_clk_cpu_freq_get_config
+                0x0000000040081874       0xa1 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0xa5 (size before relaxing)
+                0x0000000040081874                rtc_clk_cpu_freq_get_config
+ *fill*         0x0000000040081915        0x3 
+ .text.rtc_clk_xtal_freq_update
+                0x0000000040081918       0x2c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081918                rtc_clk_xtal_freq_update
+ .text.rtc_clk_apb_freq_update
+                0x0000000040081944       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081944                rtc_clk_apb_freq_update
+ *fill*         0x000000004008195d        0x3 
+ .text.rtc_clk_cpu_freq_to_xtal
+                0x0000000040081960       0x9f /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0xa3 (size before relaxing)
+                0x0000000040081960                rtc_clk_cpu_freq_to_xtal
+ *fill*         0x00000000400819ff        0x1 
+ .text.rtc_clk_apb_freq_get
+                0x0000000040081a00       0x27 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081a00                rtc_clk_apb_freq_get
+ *fill*         0x0000000040081a27        0x1 
  .text.rtc_clk_cal_internal
-                0x00000000400815c8      0x1b0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040081a28      0x1b0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
                                         0x1c0 (size before relaxing)
  .text.rtc_clk_cal_ratio
-                0x0000000040081778       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040081bd8       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x24 (size before relaxing)
-                0x0000000040081778                rtc_clk_cal_ratio
- .text.rtc_clk_wait_for_slow_cycle
-                0x0000000040081798       0x79 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
-                0x0000000040081798                rtc_clk_wait_for_slow_cycle
- *fill*         0x0000000040081811        0x3 
- .text.rtc_clk_32k_enable_common
-                0x0000000040081814       0x81 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x0000000040081895        0x3 
- .text.rtc_clk_bbpll_disable
-                0x0000000040081898       0x3e /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x00000000400818d6        0x2 
- .text.rtc_clk_bbpll_enable
-                0x00000000400818d8       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .text.rtc_clk_32k_enable
-                0x00000000400818f0       0x2d /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400818f0                rtc_clk_32k_enable
- *fill*         0x000000004008191d        0x3 
- .text.rtc_clk_8m_enable
-                0x0000000040081920       0x9b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081920                rtc_clk_8m_enable
- *fill*         0x00000000400819bb        0x1 
- .text.rtc_clk_8m_enabled
-                0x00000000400819bc       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400819bc                rtc_clk_8m_enabled
- *fill*         0x00000000400819d5        0x3 
- .text.rtc_clk_8md256_enabled
-                0x00000000400819d8       0x1a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400819d8                rtc_clk_8md256_enabled
- *fill*         0x00000000400819f2        0x2 
- .text.rtc_clk_slow_freq_set
-                0x00000000400819f4       0x48 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400819f4                rtc_clk_slow_freq_set
- .text.rtc_clk_slow_freq_get
-                0x0000000040081a3c       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081a3c                rtc_clk_slow_freq_get
- .text.rtc_clk_slow_freq_get_hz
-                0x0000000040081a4c       0x29 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081a4c                rtc_clk_slow_freq_get_hz
- *fill*         0x0000000040081a75        0x3 
- .text.rtc_clk_fast_freq_set
-                0x0000000040081a78       0x2a /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081a78                rtc_clk_fast_freq_set
- *fill*         0x0000000040081aa2        0x2 
- .text.rtc_clk_fast_freq_get
-                0x0000000040081aa4       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081aa4                rtc_clk_fast_freq_get
- .text.rtc_clk_bbpll_configure
-                0x0000000040081ab4      0x189 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                        0x18d (size before relaxing)
-                0x0000000040081ab4                rtc_clk_bbpll_configure
- *fill*         0x0000000040081c3d        0x3 
- .text.rtc_clk_xtal_freq_get
-                0x0000000040081c40       0x35 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081c40                rtc_get_xtal
-                0x0000000040081c40                rtc_clk_xtal_freq_get
- *fill*         0x0000000040081c75        0x3 
- .text.rtc_clk_cpu_freq_mhz_to_config
-                0x0000000040081c78       0x61 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081c78                rtc_clk_cpu_freq_mhz_to_config
- *fill*         0x0000000040081cd9        0x3 
- .text.rtc_clk_cpu_freq_get_config
-                0x0000000040081cdc       0xa1 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0xa5 (size before relaxing)
-                0x0000000040081cdc                rtc_clk_cpu_freq_get_config
- *fill*         0x0000000040081d7d        0x3 
- .text.rtc_clk_xtal_freq_update
-                0x0000000040081d80       0x2c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081d80                rtc_clk_xtal_freq_update
- .text.rtc_clk_apb_freq_update
-                0x0000000040081dac       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081dac                rtc_clk_apb_freq_update
- *fill*         0x0000000040081dc5        0x3 
- .text.rtc_clk_cpu_freq_to_xtal
-                0x0000000040081dc8       0x9f /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0xa3 (size before relaxing)
-                0x0000000040081dc8                rtc_clk_cpu_freq_to_xtal
- *fill*         0x0000000040081e67        0x1 
- .text.rtc_clk_cpu_freq_to_pll_mhz
-                0x0000000040081e68       0x88 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x8c (size before relaxing)
- .text.rtc_clk_cpu_freq_to_8m
-                0x0000000040081ef0       0x62 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x66 (size before relaxing)
- *fill*         0x0000000040081f52        0x2 
- .text.rtc_clk_cpu_freq_set_config
-                0x0000000040081f54       0x5b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x76 (size before relaxing)
-                0x0000000040081f54                rtc_clk_cpu_freq_set_config
- *fill*         0x0000000040081faf        0x1 
- .text.rtc_clk_apb_freq_get
-                0x0000000040081fb0       0x27 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081fb0                rtc_clk_apb_freq_get
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
- *fill*         0x0000000040081fd7        0x0 
+                0x0000000040081bd8                rtc_clk_cal_ratio
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
+ *fill*         0x0000000040081bf8        0x0 
  *(.iram .iram.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x0000000040081fd7                _text_end = ABSOLUTE (.)
-                0x0000000040081fd7                _etext = .
+                0x0000000040081bf8                _text_end = ABSOLUTE (.)
+                0x0000000040081bf8                _etext = .
 
-.dram0.bss      0x000000003fff0000       0x18
+.dram0.bss      0x000000003fff0000       0x10
                 0x000000003fff0000                . = ALIGN (0x8)
                 0x000000003fff0000                _bss_start = ABSOLUTE (.)
  *(.dynsbss)
@@ -1229,26 +1211,23 @@ END GROUP
  *(.dynbss)
  *(.bss)
  *(.bss.*)
- .bss.mapped    0x000000003fff0000        0x1 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x000000003fff0001        0x3 
  .bss.ram_obfs_value
-                0x000000003fff0004        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000003fff0000        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .bss.words_hashed
-                0x000000003fff000c        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- .bss.s_cur_pll_freq
-                0x000000003fff0010        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff0008        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .bss.mapped    0x000000003fff000c        0x1 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *(.gnu.linkonce.b.*)
  *(COMMON)
-                0x000000003fff0018                . = ALIGN (0x8)
- *fill*         0x000000003fff0014        0x4 
-                0x000000003fff0018                _bss_end = ABSOLUTE (.)
+                0x000000003fff0010                . = ALIGN (0x8)
+ *fill*         0x000000003fff000d        0x3 
+                0x000000003fff0010                _bss_end = ABSOLUTE (.)
 
-.dram0.data     0x000000003fff0018        0x4
-                0x000000003fff0018                _data_start = ABSOLUTE (.)
+.dram0.data     0x000000003fff0010        0x4
+                0x000000003fff0010                _data_start = ABSOLUTE (.)
  *(.data)
  *(.data.*)
  .data.current_read_mapping
-                0x000000003fff0018        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x000000003fff0010        0x4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  *(.gnu.linkonce.d.*)
  *(.data1)
  *(.sdata)
@@ -1258,107 +1237,105 @@ END GROUP
  *(.sdata2.*)
  *(.gnu.linkonce.s2.*)
  *(.jcr)
-                0x000000003fff001c                _data_end = ABSOLUTE (.)
+                0x000000003fff0014                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x000000003fff001c     0x17b0
-                0x000000003fff001c                _rodata_start = ABSOLUTE (.)
+.dram0.rodata   0x000000003fff0014     0x1798
+                0x000000003fff0014                _rodata_start = ABSOLUTE (.)
  *(.rodata)
- .rodata        0x000000003fff001c       0x14 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .rodata        0x000000003fff0030        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .rodata        0x000000003fff0014       0x14 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .rodata        0x000000003fff0028        0x8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
  *(.rodata.*)
  .rodata.str1.4
-                0x000000003fff0038       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
- *fill*         0x000000003fff0073        0x1 
+                0x000000003fff0030       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
+ *fill*         0x000000003fff006b        0x1 
  .rodata.str1.4
-                0x000000003fff0074      0x3ba /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
-                                        0x3c2 (size before relaxing)
- *fill*         0x000000003fff042e        0x2 
+                0x000000003fff006c      0x3be /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                                        0x3c6 (size before relaxing)
+ *fill*         0x000000003fff042a        0x2 
  .rodata.__func__$4446
-                0x000000003fff0430       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000003fff042c       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .rodata.str1.4
-                0x000000003fff0440       0x57 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- *fill*         0x000000003fff0497        0x1 
- .rodata.__func__$2287
-                0x000000003fff0498       0x17 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- *fill*         0x000000003fff04af        0x1 
- .rodata.str1.4
-                0x000000003fff04b0      0x5a5 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000003fff043c      0x5a5 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x5ad (size before relaxing)
- *fill*         0x000000003fff0a55        0x3 
+ *fill*         0x000000003fff09e1        0x3 
  .rodata.str1.4
-                0x000000003fff0a58      0x28e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x000000003fff0ce6        0x2 
+                0x000000003fff09e4      0x163 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ *fill*         0x000000003fff0b47        0x1 
  .rodata.str1.4
-                0x000000003fff0ce8      0x163 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- *fill*         0x000000003fff0e4b        0x1 
- .rodata.str1.4
-                0x000000003fff0e4c      0x47a /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000003fff0b48      0x47a /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x4ba (size before relaxing)
- *fill*         0x000000003fff12c6        0x2 
+ *fill*         0x000000003fff0fc2        0x2 
  .rodata.str1.4
-                0x000000003fff12c8       0xc0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff0fc4       0xc0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .rodata.padding$3883
-                0x000000003fff1388       0x40 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff1084       0x40 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .rodata.__func__$3879
-                0x000000003fff13c8       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- *fill*         0x000000003fff13e1        0x3 
+                0x000000003fff10c4       0x19 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ *fill*         0x000000003fff10dd        0x3 
  .rodata.__func__$3859
-                0x000000003fff13e4       0x17 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- *fill*         0x000000003fff13fb        0x1 
+                0x000000003fff10e0       0x17 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ *fill*         0x000000003fff10f7        0x1 
  .rodata.str1.4
-                0x000000003fff13fc      0x1f5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- *fill*         0x000000003fff15f1        0x3 
+                0x000000003fff10f8       0x57 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ *fill*         0x000000003fff114f        0x1 
+ .rodata.__func__$2287
+                0x000000003fff1150       0x17 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ *fill*         0x000000003fff1167        0x1 
+ .rodata.str1.4
+                0x000000003fff1168      0x28e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x000000003fff13f6        0x2 
+ .rodata.str1.4
+                0x000000003fff13f8      0x1f5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ *fill*         0x000000003fff15ed        0x3 
  .rodata.rtc_clk_xtal_freq_estimate
-                0x000000003fff15f4       0x64 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x000000003fff15f0       0x64 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .rodata.__func__$3374
-                0x000000003fff1658        0xd /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- *fill*         0x000000003fff1665        0x3 
+                0x000000003fff1654        0xd /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ *fill*         0x000000003fff1661        0x3 
  .rodata.str1.4
-                0x000000003fff1668       0x6c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .rodata.__func__$1815
-                0x000000003fff16d4       0x15 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- *fill*         0x000000003fff16e9        0x3 
- .rodata.str1.4
-                0x000000003fff16ec       0xa8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0xa5 (size before relaxing)
+                0x000000003fff1664       0xa5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x000000003fff1709        0x3 
  .rodata.__func__$3548
-                0x000000003fff1794       0x1c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .rodata.__func__$3470
-                0x000000003fff17b0       0x1c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000003fff170c       0x1c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .rodata.str1.4
+                0x000000003fff1728       0x6c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .rodata.__func__$1815
+                0x000000003fff1794       0x15 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003fff17cc                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003fff17a9                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x000000003fff17cc                . = ((. + 0x3) & 0xfffffffffffffffc)
-                0x000000003fff17cc                __init_array_start = ABSOLUTE (.)
- *crtbegin.*(.ctors)
- *(EXCLUDE_FILE(*crtend.*) .ctors)
+                0x000000003fff17ac                . = ((. + 0x3) & 0xfffffffffffffffc)
+ *fill*         0x000000003fff17a9        0x3 
+                0x000000003fff17ac                __init_array_start = ABSOLUTE (.)
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x000000003fff17cc                __init_array_end = ABSOLUTE (.)
- *crtbegin.*(.dtors)
- *(EXCLUDE_FILE(*crtend.*) .dtors)
+                0x000000003fff17ac                __init_array_end = ABSOLUTE (.)
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x000000003fff17cc                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003fff17ac                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003fff17cc                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003fff17ac                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003fff17cc                _rodata_end = ABSOLUTE (.)
-                0x000000003fff17cc                _lit4_start = ABSOLUTE (.)
+                0x000000003fff17ac                _rodata_end = ABSOLUTE (.)
+                0x000000003fff17ac                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003fff17cc                _lit4_end = ABSOLUTE (.)
-                0x000000003fff17cc                . = ALIGN (0x4)
-                0x000000003fff17cc                _heap_start = ABSOLUTE (.)
+                0x000000003fff17ac                _lit4_end = ABSOLUTE (.)
+                0x000000003fff17ac                . = ALIGN (0x4)
+                0x000000003fff17ac                _heap_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (abort, 0x4000bba4)
                 [!provide]                        PROVIDE (Add2SelfBigHex256, 0x40015b7c)
                 [!provide]                        PROVIDE (AddBigHex256, 0x40015b28)
@@ -3124,62 +3101,62 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
 .debug_frame    0x0000000000000000     0x1098
  .debug_frame   0x0000000000000000       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_frame   0x0000000000000058      0x118 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_frame   0x0000000000000170       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_frame   0x0000000000000198       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_frame   0x00000000000001f0      0x100 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_frame   0x00000000000002f0       0xe8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_frame   0x00000000000003d8      0x130 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_frame   0x0000000000000508       0xa0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_frame   0x00000000000005a8       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_frame   0x00000000000005d0      0x148 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_frame   0x0000000000000718       0x70 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_frame   0x0000000000000170      0x100 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_frame   0x0000000000000270       0xa0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_frame   0x0000000000000310       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_frame   0x0000000000000338       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_frame   0x0000000000000360      0x148 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_frame   0x00000000000004a8       0x70 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_frame   0x0000000000000518       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_frame   0x0000000000000570       0xe8 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_frame   0x0000000000000658      0x130 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_frame   0x0000000000000788       0x70 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .debug_frame   0x00000000000007f8      0x208 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_frame   0x0000000000000a00       0x70 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_frame   0x0000000000000a70      0x118 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_frame   0x0000000000000b88       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_frame   0x0000000000000be0       0x40 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_frame   0x0000000000000c20       0xb8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_frame   0x0000000000000cd8      0x370 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_frame   0x0000000000000c20      0x370 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_frame   0x0000000000000f90       0xb8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_frame   0x0000000000001048       0x28 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_frame   0x0000000000001070       0x28 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_info     0x0000000000000000     0xd641
+.debug_info     0x0000000000000000     0xd621
  .debug_info    0x0000000000000000      0x337 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_info    0x0000000000000337     0x1639 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_info    0x0000000000001970      0x27a /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_info    0x0000000000001bea      0x25e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_info    0x0000000000001e48     0x13e7 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_info    0x000000000000322f      0xccf /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_info    0x0000000000003efe     0x2adb /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_info    0x00000000000069d9      0xaf0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_info    0x00000000000074c9      0x526 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_info    0x00000000000079ef     0x13ef /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_info    0x0000000000008dde      0x507 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_info    0x0000000000001970     0x13e7 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_info    0x0000000000002d57      0xaf0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_info    0x0000000000003847      0x27a /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_info    0x0000000000003ac1      0x526 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_info    0x0000000000003fe7     0x13ef /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_info    0x00000000000053d6      0x507 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_info    0x00000000000058dd      0x25e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_info    0x0000000000005b3b      0xccf /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_info    0x000000000000680a     0x2adb /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_info    0x00000000000092e5      0x900 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .debug_info    0x0000000000009be5      0xaf5 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_info    0x000000000000a6da      0x118 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_info    0x000000000000a7f2      0x3f7 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_info    0x000000000000abe9      0x339 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_info    0x000000000000af22      0x7d0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_info    0x000000000000b6f2       0x95 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .debug_info    0x000000000000b787      0x45b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_info    0x000000000000bbe2     0x13ca /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x000000000000cfac       0xcd /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .debug_info    0x000000000000d079      0x5c8 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_info    0x000000000000af22      0x7b0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_info    0x000000000000b6d2       0x95 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
+ .debug_info    0x000000000000b767     0x13ca /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_info    0x000000000000cb31      0x45b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x000000000000cf8c       0xcd /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_info    0x000000000000d059      0x5c8 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_abbrev   0x0000000000000000     0x2937
  .debug_abbrev  0x0000000000000000      0x15a /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_abbrev  0x000000000000015a      0x3fc /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_abbrev  0x0000000000000556      0x108 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_abbrev  0x000000000000065e      0x13d /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_abbrev  0x000000000000079b      0x382 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_abbrev  0x0000000000000b1d      0x258 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_abbrev  0x0000000000000d75      0x38e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_abbrev  0x0000000000001103      0x1e4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_abbrev  0x00000000000012e7      0x17b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_abbrev  0x0000000000001462      0x2af /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_abbrev  0x0000000000001711      0x1b1 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_abbrev  0x0000000000000556      0x382 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_abbrev  0x00000000000008d8      0x1e4 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_abbrev  0x0000000000000abc      0x108 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_abbrev  0x0000000000000bc4      0x17b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_abbrev  0x0000000000000d3f      0x2af /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_abbrev  0x0000000000000fee      0x1b1 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_abbrev  0x000000000000119f      0x13d /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_abbrev  0x00000000000012dc      0x258 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_abbrev  0x0000000000001534      0x38e /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_abbrev  0x00000000000018c2      0x1f3 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .debug_abbrev  0x0000000000001ab5      0x22e /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_abbrev  0x0000000000001ce3       0x96 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
@@ -3187,30 +3164,30 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
  .debug_abbrev  0x0000000000001ec0      0x135 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_abbrev  0x0000000000001ff5      0x20c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_abbrev  0x0000000000002201       0x5b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .debug_abbrev  0x000000000000225c      0x1a0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_abbrev  0x00000000000023fc      0x37c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x000000000000225c      0x37c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_abbrev  0x00000000000025d8      0x1a0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_abbrev  0x0000000000002778       0x60 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_abbrev  0x00000000000027d8      0x15f /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_loc      0x0000000000000000     0x5ac8
  .debug_loc     0x0000000000000000       0x84 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_loc     0x0000000000000084      0x761 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_loc     0x00000000000007e5       0x62 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_loc     0x0000000000000847      0x854 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_loc     0x000000000000109b      0x749 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_loc     0x00000000000017e4      0x232 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_loc     0x0000000000001a16      0x3e6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_loc     0x0000000000001dfc      0x1b6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_loc     0x0000000000001fb2      0xb43 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_loc     0x0000000000002af5      0x1f2 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_loc     0x00000000000007e5      0x854 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_loc     0x0000000000001039      0x3e6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_loc     0x000000000000141f      0x1b6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_loc     0x00000000000015d5      0xb43 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_loc     0x0000000000002118      0x1f2 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_loc     0x000000000000230a       0x62 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_loc     0x000000000000236c      0x749 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_loc     0x0000000000002ab5      0x232 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_loc     0x0000000000002ce7      0x4ad /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .debug_loc     0x0000000000003194      0xa20 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_loc     0x0000000000003bb4       0x13 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_loc     0x0000000000003bc7      0x2e5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_loc     0x0000000000003eac      0x245 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_loc     0x00000000000040f1      0x1c3 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_loc     0x00000000000042b4      0x256 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_loc     0x000000000000450a      0xbb5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x00000000000042b4      0xbb5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_loc     0x0000000000004e69      0x256 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_loc     0x00000000000050bf       0x21 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_loc     0x00000000000050e0      0x9e8 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
@@ -3220,23 +3197,23 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
  .debug_aranges
                 0x0000000000000030       0x70 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .debug_aranges
-                0x00000000000000a0       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                0x00000000000000a0       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .debug_aranges
-                0x00000000000000c0       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000000000108       0x48 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
  .debug_aranges
-                0x00000000000000f0       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000000000150       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
  .debug_aranges
-                0x0000000000000158       0x60 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000000000170       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .debug_aranges
-                0x00000000000001b8       0x78 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                0x0000000000000190       0x80 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .debug_aranges
-                0x0000000000000230       0x48 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000000000210       0x38 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .debug_aranges
-                0x0000000000000278       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000000000248       0x30 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .debug_aranges
-                0x0000000000000298       0x80 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000000000278       0x60 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
  .debug_aranges
-                0x0000000000000318       0x38 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000000002d8       0x78 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_aranges
                 0x0000000000000350       0x38 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .debug_aranges
@@ -3252,9 +3229,9 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
  .debug_aranges
                 0x0000000000000548       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .debug_aranges
-                0x0000000000000560       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000560      0x138 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_aranges
-                0x00000000000005b0      0x138 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000000000698       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_aranges
                 0x00000000000006e8       0x20 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_aranges
@@ -3263,72 +3240,72 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
 .debug_ranges   0x0000000000000000      0x738
  .debug_ranges  0x0000000000000000       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_ranges  0x0000000000000020       0x60 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_ranges  0x0000000000000080       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_ranges  0x0000000000000090       0x38 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_ranges  0x00000000000000c8       0x70 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_ranges  0x0000000000000138       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_ranges  0x0000000000000188       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_ranges  0x00000000000001f0       0x80 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_ranges  0x0000000000000270       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_ranges  0x00000000000002c8       0xa0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_ranges  0x0000000000000368       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_ranges  0x0000000000000080       0x70 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_ranges  0x00000000000000f0       0x80 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_ranges  0x0000000000000170       0x10 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_ranges  0x0000000000000180       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_ranges  0x00000000000001d8       0xa0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_ranges  0x0000000000000278       0x58 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_ranges  0x00000000000002d0       0x38 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_ranges  0x0000000000000308       0x50 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_ranges  0x0000000000000358       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_ranges  0x00000000000003c0       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .debug_ranges  0x00000000000003e8       0xb0 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_ranges  0x0000000000000498       0x28 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_ranges  0x00000000000004c0       0x60 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_ranges  0x0000000000000520       0x20 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_ranges  0x0000000000000540       0x18 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_ranges  0x0000000000000558       0x40 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_ranges  0x0000000000000598      0x140 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_ranges  0x0000000000000558      0x140 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_ranges  0x0000000000000698       0x40 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_ranges  0x00000000000006d8       0x60 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
-.debug_line     0x0000000000000000     0x6bda
+.debug_line     0x0000000000000000     0x6bd4
  .debug_line    0x0000000000000000      0x2bf /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
  .debug_line    0x00000000000002bf      0x94b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .debug_line    0x0000000000000c0a      0x1ad /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .debug_line    0x0000000000000db7      0x375 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- .debug_line    0x000000000000112c      0x8da /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .debug_line    0x0000000000001a06      0x5b0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .debug_line    0x0000000000001fb6      0x4ff /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
- .debug_line    0x00000000000024b5      0x60f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
- .debug_line    0x0000000000002ac4      0x306 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- .debug_line    0x0000000000002dca      0xa77 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- .debug_line    0x0000000000003841      0x44f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x0000000000000c0a      0x8da /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_line    0x00000000000014e4      0x60f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_line    0x0000000000001af3      0x1ad /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+ .debug_line    0x0000000000001ca0      0x306 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_line    0x0000000000001fa6      0xa77 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_line    0x0000000000002a1d      0x44f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_line    0x0000000000002e6c      0x375 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .debug_line    0x00000000000031e1      0x5b0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .debug_line    0x0000000000003791      0x4ff /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .debug_line    0x0000000000003c90      0x4a4 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .debug_line    0x0000000000004134      0xaa6 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .debug_line    0x0000000000004bda      0x173 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
  .debug_line    0x0000000000004d4d      0x412 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_line    0x000000000000515f      0x3aa /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
- .debug_line    0x0000000000005509      0x37b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_line    0x0000000000005884       0xe2 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .debug_line    0x0000000000005966      0x3b5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
- .debug_line    0x0000000000005d1b      0xca8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x00000000000069c3       0x89 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
- .debug_line    0x0000000000006a4c      0x18e /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+ .debug_line    0x0000000000005509      0x375 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ .debug_line    0x000000000000587e       0xe2 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
+ .debug_line    0x0000000000005960      0xca8 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_line    0x0000000000006608      0x3b5 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x00000000000069bd       0x89 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+ .debug_line    0x0000000000006a46      0x18e /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_str      0x0000000000000000     0x48d7
  .debug_str     0x0000000000000000      0x302 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
                                         0x366 (size before relaxing)
  .debug_str     0x0000000000000302      0xaa7 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                         0xc88 (size before relaxing)
- .debug_str     0x0000000000000da9      0x22f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
-                                        0x383 (size before relaxing)
- .debug_str     0x0000000000000fd8       0xa0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                                        0x24e (size before relaxing)
- .debug_str     0x0000000000001078      0x311 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ .debug_str     0x0000000000000da9      0x32b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x7b9 (size before relaxing)
- .debug_str     0x0000000000001389      0x265 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                                        0x5d4 (size before relaxing)
- .debug_str     0x00000000000015ee     0x1877 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
-                                       0x1bb9 (size before relaxing)
- .debug_str     0x0000000000002e65      0x33c /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .debug_str     0x00000000000010d4      0x359 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                         0x797 (size before relaxing)
- .debug_str     0x00000000000031a1       0xa6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ .debug_str     0x000000000000142d      0x22f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
+                                        0x383 (size before relaxing)
+ .debug_str     0x000000000000165c       0xa6 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x3c4 (size before relaxing)
- .debug_str     0x0000000000003247      0x239 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ .debug_str     0x0000000000001702      0x260 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x989 (size before relaxing)
- .debug_str     0x0000000000003480      0x102 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .debug_str     0x0000000000001962      0x102 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                         0x359 (size before relaxing)
+ .debug_str     0x0000000000001a64       0x68 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                                        0x24e (size before relaxing)
+ .debug_str     0x0000000000001acc      0x23f /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                                        0x5d4 (size before relaxing)
+ .debug_str     0x0000000000001d0b     0x1877 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
+                                       0x1bb9 (size before relaxing)
  .debug_str     0x0000000000003582      0x18d /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
                                         0x349 (size before relaxing)
  .debug_str     0x000000000000370f      0x35f /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
@@ -3339,14 +3316,14 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
                                         0x501 (size before relaxing)
  .debug_str     0x0000000000003c49       0xb4 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
                                         0x239 (size before relaxing)
- .debug_str     0x0000000000003cfd      0x2ef /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
-                                        0x6b5 (size before relaxing)
- .debug_str     0x0000000000003fec       0x34 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
+ .debug_str     0x0000000000003cfd      0x2d3 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                                        0x699 (size before relaxing)
+ .debug_str     0x0000000000003fd0       0x34 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
                                         0x13a (size before relaxing)
- .debug_str     0x0000000000004020      0x15c /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
-                                        0x3a7 (size before relaxing)
- .debug_str     0x000000000000417c      0x547 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .debug_str     0x0000000000004004      0x587 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
                                         0xa93 (size before relaxing)
+ .debug_str     0x000000000000458b      0x138 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
+                                        0x3a7 (size before relaxing)
  .debug_str     0x00000000000046c3      0x138 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
                                         0x1de (size before relaxing)
  .debug_str     0x00000000000047fb       0xdc /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
@@ -3356,15 +3333,15 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
  .comment       0x0000000000000000       0x3a /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x3b (size before relaxing)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
@@ -3372,23 +3349,23 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .comment       0x000000000000003a       0x3b /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .comment       0x000000000000003a       0x3b /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .comment       0x000000000000003a       0x3b /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .xtensa.info    0x0000000000000000       0x38
  .xtensa.info   0x0000000000000000       0x38 /opt/esp/esp32projects/simple_http_server/build/bootloader/main/libmain.a(bootloader_start.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
- .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
- .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+ .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader_support/libbootloader_support.a(flash_qio_mode.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/log/liblog.a(log.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(cpu_util.o)
@@ -3396,7 +3373,7 @@ OUTPUT(/opt/esp/esp32projects/simple_http_server/build/bootloader/bootloader.elf
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_init.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .xtensa.info   0x0000000000000038        0x0 /opt/esp/esp32projects/simple_http_server/build/bootloader/soc/libsoc.a(rtc_time.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .xtensa.info   0x0000000000000038        0x0 /opt/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)

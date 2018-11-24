@@ -81,7 +81,6 @@ lib/http_auth.o: \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtensa-versions.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-matmap.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
- /opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/cc.h \
@@ -129,7 +128,6 @@ lib/http_auth.o: \
  /opt/esp/esp-idf/components/log/include/esp_log.h \
  /opt/esp/esp-idf/components/log/include/esp_log_internal.h \
  /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h \
- /opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h \
  /opt/esp/esp-idf/components/esp_http_client/lib/include/http_auth.h
 
 /opt/esp/esp-idf/components/newlib/include/stdlib.h:
@@ -294,8 +292,6 @@ lib/http_auth.o: \
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 
-/opt/esp/esp-idf/components/lwip/port/esp32/include/netif/dhcp_state.h:
-
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/debug.h:
 
 /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/arch.h:
@@ -389,8 +385,6 @@ lib/http_auth.o: \
 /opt/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 /opt/esp/esp-idf/components/esp_http_client/lib/include/http_utils.h:
-
-/opt/esp/esp-idf/components/tcp_transport/include/transport_utils.h:
 
 /opt/esp/esp-idf/components/esp_http_client/lib/include/http_auth.h:
 /opt/esp/esp-idf/components/esp_http_client/lib/http_auth.c:

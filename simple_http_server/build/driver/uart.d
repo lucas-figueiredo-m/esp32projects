@@ -87,7 +87,7 @@ uart.o: /opt/esp/esp-idf/components/driver/uart.c \
  /opt/esp/esp-idf/components/freertos/include/freertos/task.h \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
- /opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
@@ -277,7 +277,7 @@ uart.o: /opt/esp/esp-idf/components/driver/uart.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/list.h:
 
-/opt/esp/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h:
+/opt/esp/esp-idf/components/freertos/include/freertos/ringbuf.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 

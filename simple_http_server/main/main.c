@@ -29,21 +29,56 @@
 #define EXAMPLE_WIFI_PASS CONFIG_WIFI_PASSWORD
 
 static const char *TAG="APP";
+char *internetProtocol;
+cJSON *root;
+char *type = "sin";
+int frequency = 60;
+int amplitude = 100;
+
 
 char *jsonToString()
 {
-	cJSON *root;
 	char *rendered;
 
 	root = cJSON_CreateObject();
 
 	//cJSON_AddItemToObject(root, "name", cJSON_CreateString("example"));
 	//cJSON_AddItemToObject(root , "format", fmt = cJSON_CreateObject());
-	cJSON_AddStringToObject(root, "Cumprimento 1", "Hello World!");
-	cJSON_AddStringToObject(root, "Cumprimento 2", "Bom Dia");
+	cJSON_AddStringToObject(root, "type", type);
+    cJSON_AddNumberToObject(root, "frequency", frequency);
+    cJSON_AddNumberToObject(root, "amplitude", amplitude);
 	rendered = cJSON_Print(root);
 
 	return rendered;
+}
+
+
+void updateJSON(char *incoming)
+{
+    cJSON *var     = cJSON_Parse(incoming);
+    cJSON *newTyp  = NULL;
+    cJSON *newFreq = NULL;
+    cJSON *newAmpl = NULL;
+
+    newTyp  = cJSON_GetObjectItemCaseSensitive(var, "type");
+    newFreq = cJSON_GetObjectItemCaseSensitive(var, "frequency");
+    newAmpl = cJSON_GetObjectItemCaseSensitive(var, "amplitude");
+
+    if(cJSON_IsString(newTyp))
+    {
+        type = cJSON_Print(newTyp);
+        printf("Type: %s\n",type);  // TEM QUE REMOVER AS ASPAS
+    }
+
+    if(cJSON_IsNumber(newFreq))
+    {
+        frequency = atoi(cJSON_Print(newFreq));
+    }
+
+    if(cJSON_IsNumber(newAmpl))
+    {
+        amplitude = atoi(cJSON_Print(newAmpl));
+    }
 }
 
 
@@ -150,10 +185,15 @@ esp_err_t echo_post_handler(httpd_req_t *req)
         httpd_resp_send_chunk(req, buf, ret);
         remaining -= ret;
 
+        char *pbuf = &buf;
+        updateJSON(pbuf);
+
         /* Log data received */
         ESP_LOGI(TAG, "=========== RECEIVED DATA ==========");
         ESP_LOGI(TAG, "%.*s", ret, buf);
+        printf("\n%s\n", internetProtocol);
         ESP_LOGI(TAG, "====================================");
+
     }
 
     // End response
@@ -243,6 +283,7 @@ static esp_err_t event_handler(void *ctx, system_event_t *event)
         ESP_LOGI(TAG, "SYSTEM_EVENT_STA_GOT_IP");
         ESP_LOGI(TAG, "Got IP: '%s'",
                 ip4addr_ntoa(&event->event_info.got_ip.ip_info.ip));
+        internetProtocol = ip4addr_ntoa(&event->event_info.got_ip.ip_info.ip);
 
         /* Start the web server */
         if (*server == NULL) {

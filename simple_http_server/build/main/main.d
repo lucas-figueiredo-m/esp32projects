@@ -1,19 +1,28 @@
 main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
- /opt/esp/esp-idf/components/esp32/include/esp_wifi.h \
- /opt/esp/esp-idf/components/newlib/include/stdint.h \
- /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
- /opt/esp/esp-idf/components/newlib/include/sys/features.h \
- /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
- /opt/esp/esp-idf/components/newlib/include/sys/reent.h \
+ /opt/esp/esp-idf/components/newlib/include/stdio.h \
  /opt/esp/esp-idf/components/newlib/include/_ansi.h \
  /opt/esp/esp-idf/components/newlib/include/newlib.h \
  /opt/esp/esp-idf/components/newlib/include/sys/config.h \
  /opt/esp/esp-idf/components/newlib/include/machine/ieeefp.h \
+ /opt/esp/esp-idf/components/newlib/include/sys/features.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
+ /opt/esp/esp-idf/components/newlib/include/sys/cdefs.h \
+ /opt/esp/esp-idf/components/newlib/include/machine/_default_types.h \
+ /opt/esp/esp-idf/components/newlib/include/sys/reent.h \
+ /opt/esp/esp-idf/components/newlib/include/_ansi.h \
  /opt/esp/esp-idf/components/newlib/include/sys/_types.h \
  /opt/esp/esp-idf/components/newlib/include/machine/_types.h \
  /opt/esp/esp-idf/components/newlib/include/sys/lock.h \
+ /opt/esp/esp-idf/components/newlib/include/sys/types.h \
+ /opt/esp/esp-idf/components/newlib/include/machine/types.h \
+ /opt/esp/esp-idf/components/newlib/include/sys/sched.h \
+ /opt/esp/esp-idf/components/newlib/include/sys/stdio.h \
+ /opt/esp/esp-idf/components/newlib/include/stdlib.h \
+ /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
+ /opt/esp/esp-idf/components/newlib/include/alloca.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
+ /opt/esp/esp-idf/components/newlib/include/stdint.h \
+ /opt/esp/esp-idf/components/newlib/include/sys/_intsup.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h \
  /opt/esp/esp32projects/simple_http_server/build/include/sdkconfig.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_config.h \
@@ -26,11 +35,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_context.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/corebits.h \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h \
- /opt/esp/esp-idf/components/newlib/include/stdlib.h \
- /opt/esp/esp-idf/components/newlib/include/_ansi.h \
- /opt/esp/esp-idf/components/newlib/include/sys/cdefs.h \
- /opt/esp/esp-idf/components/newlib/include/machine/stdlib.h \
- /opt/esp/esp-idf/components/newlib/include/alloca.h \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/soc.h \
  /opt/esp/esp-idf/components/esp32/include/esp_assert.h \
@@ -45,11 +49,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h \
  /opt/esp/esp-idf/components/esp32/include/esp_crosscore_int.h \
  /opt/esp/esp-idf/components/esp32/include/esp_timer.h \
- /opt/esp/esp-idf/components/newlib/include/stdio.h \
- /opt/esp/esp-idf/components/newlib/include/sys/types.h \
- /opt/esp/esp-idf/components/newlib/include/machine/types.h \
- /opt/esp/esp-idf/components/newlib/include/sys/sched.h \
- /opt/esp/esp-idf/components/newlib/include/sys/stdio.h \
  /opt/esp/esp-idf/components/esp32/include/esp_err.h \
  /opt/esp/esp-idf/components/heap/include/esp_heap_caps.h \
  /opt/esp/esp-idf/components/heap/include/multi_heap.h \
@@ -76,7 +75,21 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/task.h \
+ /opt/esp/esp-idf/components/newlib/include/limits.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /opt/esp/esp-idf/components/driver/include/driver/adc.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
+ /opt/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
+ /opt/esp/esp-idf/components/driver/include/driver/ledc.h \
+ /opt/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h \
+ /opt/esp/esp-idf/components/esp32/include/esp_dport_access.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
+ /opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
+ /opt/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /opt/esp/esp-idf/components/esp32/include/rom/queue.h \
  /opt/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  /opt/esp/esp-idf/components/esp32/include/esp_interface.h \
@@ -108,9 +121,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/newlib/include/errno.h \
  /opt/esp/esp-idf/components/newlib/include/sys/errno.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/task.h \
- /opt/esp/esp-idf/components/newlib/include/limits.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h \
@@ -136,19 +146,7 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/newlib/include/sys/string.h \
  /opt/esp/esp-idf/components/nghttp/port/include/http_parser.h
 
-/opt/esp/esp-idf/components/esp32/include/esp_wifi.h:
-
-/opt/esp/esp-idf/components/newlib/include/stdint.h:
-
-/opt/esp/esp-idf/components/newlib/include/machine/_default_types.h:
-
-/opt/esp/esp-idf/components/newlib/include/sys/features.h:
-
-/opt/esp/esp-idf/components/newlib/include/sys/_intsup.h:
-
-/opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
-
-/opt/esp/esp-idf/components/newlib/include/sys/reent.h:
+/opt/esp/esp-idf/components/newlib/include/stdio.h:
 
 /opt/esp/esp-idf/components/newlib/include/_ansi.h:
 
@@ -158,13 +156,43 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 
 /opt/esp/esp-idf/components/newlib/include/machine/ieeefp.h:
 
+/opt/esp/esp-idf/components/newlib/include/sys/features.h:
+
 /opt/esp/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
+
+/opt/esp/esp-idf/components/newlib/include/sys/cdefs.h:
+
+/opt/esp/esp-idf/components/newlib/include/machine/_default_types.h:
+
+/opt/esp/esp-idf/components/newlib/include/sys/reent.h:
+
+/opt/esp/esp-idf/components/newlib/include/_ansi.h:
 
 /opt/esp/esp-idf/components/newlib/include/sys/_types.h:
 
 /opt/esp/esp-idf/components/newlib/include/machine/_types.h:
 
 /opt/esp/esp-idf/components/newlib/include/sys/lock.h:
+
+/opt/esp/esp-idf/components/newlib/include/sys/types.h:
+
+/opt/esp/esp-idf/components/newlib/include/machine/types.h:
+
+/opt/esp/esp-idf/components/newlib/include/sys/sched.h:
+
+/opt/esp/esp-idf/components/newlib/include/sys/stdio.h:
+
+/opt/esp/esp-idf/components/newlib/include/stdlib.h:
+
+/opt/esp/esp-idf/components/newlib/include/machine/stdlib.h:
+
+/opt/esp/esp-idf/components/newlib/include/alloca.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
+
+/opt/esp/esp-idf/components/newlib/include/stdint.h:
+
+/opt/esp/esp-idf/components/newlib/include/sys/_intsup.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h:
 
@@ -189,16 +217,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 /opt/esp/esp-idf/components/esp32/include/xtensa/corebits.h:
 
 /opt/esp/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h:
-
-/opt/esp/esp-idf/components/newlib/include/stdlib.h:
-
-/opt/esp/esp-idf/components/newlib/include/_ansi.h:
-
-/opt/esp/esp-idf/components/newlib/include/sys/cdefs.h:
-
-/opt/esp/esp-idf/components/newlib/include/machine/stdlib.h:
-
-/opt/esp/esp-idf/components/newlib/include/alloca.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/ets_sys.h:
 
@@ -227,16 +245,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 /opt/esp/esp-idf/components/esp32/include/esp_crosscore_int.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_timer.h:
-
-/opt/esp/esp-idf/components/newlib/include/stdio.h:
-
-/opt/esp/esp-idf/components/newlib/include/sys/types.h:
-
-/opt/esp/esp-idf/components/newlib/include/machine/types.h:
-
-/opt/esp/esp-idf/components/newlib/include/sys/sched.h:
-
-/opt/esp/esp-idf/components/newlib/include/sys/stdio.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_err.h:
 
@@ -290,7 +298,35 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 
+/opt/esp/esp-idf/components/freertos/include/freertos/task.h:
+
+/opt/esp/esp-idf/components/newlib/include/limits.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/list.h:
+
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
+/opt/esp/esp-idf/components/driver/include/driver/adc.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
+
+/opt/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
+
+/opt/esp/esp-idf/components/driver/include/driver/ledc.h:
+
+/opt/esp/esp-idf/components/driver/include/driver/periph_ctrl.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/dport_access.h:
+
+/opt/esp/esp-idf/components/esp32/include/esp_dport_access.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
+
+/opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
+/opt/esp/esp-idf/components/esp32/include/esp_wifi.h:
 
 /opt/esp/esp-idf/components/esp32/include/rom/queue.h:
 
@@ -353,12 +389,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 /opt/esp/esp-idf/components/newlib/include/sys/errno.h:
 
 /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:
-
-/opt/esp/esp-idf/components/freertos/include/freertos/task.h:
-
-/opt/esp/esp-idf/components/newlib/include/limits.h:
-
-/opt/esp/esp-idf/components/freertos/include/freertos/list.h:
 
 /opt/esp/esp-idf/components/freertos/include/freertos/semphr.h:
 

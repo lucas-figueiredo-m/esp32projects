@@ -6,6 +6,17 @@
    software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
    CONDITIONS OF ANY KIND, either express or implied.
 */
+#include <stdio.h>
+#include <stdlib.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/queue.h"
+#include "driver/gpio.h"
+#include "sdkconfig.h"
+#include "driver/adc.h"
+#include "esp_adc_cal.h"
+#include "driver/ledc.h"
+#include "esp_err.h"
 
 #include <esp_wifi.h>
 #include <esp_event_loop.h>
@@ -25,6 +36,15 @@
  * with the config you want -
  * ie. #define EXAMPLE_WIFI_SSID "mywifissid"
 */
+
+#define LEDC_HS_TIMER          LEDC_TIMER_0
+#define LEDC_HS_MODE           LEDC_HIGH_SPEED_MODE
+
+#define LEDC_HS_CH0_GPIO       (19)
+#define LEDC_HS_CH0_CHANNEL    LEDC_CHANNEL_0
+
+#define LEDC_TEST_CH_NUM       (6)
+
 #define EXAMPLE_WIFI_SSID CONFIG_WIFI_SSID
 #define EXAMPLE_WIFI_PASS CONFIG_WIFI_PASSWORD
 
@@ -32,9 +52,50 @@ static const char *TAG="APP";
 char *internetProtocol;
 cJSON *root;
 char *type = "sin";
-int frequency = 60;
+int duty_cicle = 60;
 int amplitude = 100;
 
+QueueHandle_t xQueueReadings;
+
+ledc_timer_config_t ledc_timer = 
+{
+    .duty_resolution = LEDC_TIMER_11_BIT,  // resolution of PWM duty
+    .freq_hz = 38000,                      // duty_cicle of PWM signal
+    .speed_mode = LEDC_HS_MODE,            // timer mode
+    .timer_num = LEDC_HS_TIMER             // timer index
+};
+    // Set configuration of timer0 for high speed channels
+
+ledc_channel_config_t ledc_channel[LEDC_TEST_CH_NUM] = 
+{
+    {
+        .channel    = LEDC_HS_CH0_CHANNEL,
+        .duty       = 0,
+        .gpio_num   = LEDC_HS_CH0_GPIO,
+        .speed_mode = LEDC_HS_MODE,
+        .timer_sel  = LEDC_HS_TIMER
+    },
+
+}; // MAX DUTY = 4095
+
+void pwmControlTask(void *pvParameter)
+{
+    //int ch;
+    uint32_t json_duty = 0;
+
+    ledc_timer_config(&ledc_timer);
+    ledc_channel_config(&ledc_channel[0]);
+
+    while (1) 
+    {
+        if(xQueueReceive(xQueueReadings, &json_duty, portMAX_DELAY))
+        {
+            printf("\nReading Successfull. New PWM: %d", json_duty);
+            ledc_set_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel, json_duty);
+            ledc_update_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel);
+        }
+    }
+}
 
 char *jsonToString()
 {
@@ -45,11 +106,23 @@ char *jsonToString()
 	//cJSON_AddItemToObject(root, "name", cJSON_CreateString("example"));
 	//cJSON_AddItemToObject(root , "format", fmt = cJSON_CreateObject());
 	cJSON_AddStringToObject(root, "type", type);
-    cJSON_AddNumberToObject(root, "frequency", frequency);
+    cJSON_AddNumberToObject(root, "duty_cicle", duty_cicle);
     cJSON_AddNumberToObject(root, "amplitude", amplitude);
 	rendered = cJSON_Print(root);
 
 	return rendered;
+}
+
+void removeChar(char *str, char garbage) 
+{
+
+    char *src, *dst;
+    for (src = dst = str; *src != '\0'; src++) 
+    {
+        *dst = *src;
+        if (*dst != garbage) dst++;
+    }
+    *dst = '\0';
 }
 
 
@@ -57,22 +130,36 @@ void updateJSON(char *incoming)
 {
     cJSON *var     = cJSON_Parse(incoming);
     cJSON *newTyp  = NULL;
-    cJSON *newFreq = NULL;
+    cJSON *newDuty = NULL;
     cJSON *newAmpl = NULL;
 
     newTyp  = cJSON_GetObjectItemCaseSensitive(var, "type");
-    newFreq = cJSON_GetObjectItemCaseSensitive(var, "frequency");
+    newDuty = cJSON_GetObjectItemCaseSensitive(var, "duty_cicle");
     newAmpl = cJSON_GetObjectItemCaseSensitive(var, "amplitude");
 
     if(cJSON_IsString(newTyp))
     {
         type = cJSON_Print(newTyp);
+        removeChar(type,'/');
+        removeChar(type,'"');
         printf("Type: %s\n",type);  // TEM QUE REMOVER AS ASPAS
     }
 
-    if(cJSON_IsNumber(newFreq))
+    if(cJSON_IsNumber(newDuty))
     {
-        frequency = atoi(cJSON_Print(newFreq));
+        duty_cicle = atoi(cJSON_Print(newDuty));
+        if(xQueueReadings !=0)
+        {
+            if(xQueueSendToBack(xQueueReadings, &duty_cicle, portMAX_DELAY))
+            {
+                printf("\nValue posted\n");
+            }
+
+            else
+            {
+                printf("\nFailed to post value\n");
+            }
+        }
     }
 
     if(cJSON_IsNumber(newAmpl))
@@ -173,6 +260,7 @@ esp_err_t echo_post_handler(httpd_req_t *req)
 {
     char buf[100];
     int ret, remaining = req->content_len;
+    httpd_resp_set_type(req, HTTPD_TYPE_JSON);
 
     while (remaining > 0) {
         /* Read the data for the request */
@@ -181,12 +269,13 @@ esp_err_t echo_post_handler(httpd_req_t *req)
             return ESP_FAIL;
         }
 
+        
+
         /* Send back the same data */
-        httpd_resp_send_chunk(req, buf, ret);
+        
         remaining -= ret;
 
-        char *pbuf = &buf;
-        updateJSON(pbuf);
+        
 
         /* Log data received */
         ESP_LOGI(TAG, "=========== RECEIVED DATA ==========");
@@ -197,7 +286,9 @@ esp_err_t echo_post_handler(httpd_req_t *req)
     }
 
     // End response
-    httpd_resp_send_chunk(req, NULL, 0);
+    char *pbuf = &buf;
+    updateJSON(pbuf);
+    httpd_resp_send(req, pbuf, strlen(pbuf));
     return ESP_OK;
 }
 
@@ -208,41 +299,6 @@ httpd_uri_t echo = {
     .user_ctx  = NULL
 };
 
-/* An HTTP PUT handler. This demonstrates realtime
- * registration and deregistration of URI handlers
- */
-esp_err_t ctrl_put_handler(httpd_req_t *req)
-{
-    char buf;
-    int ret;
-
-    if ((ret = httpd_req_recv(req, &buf, 1)) < 0) {
-        return ESP_FAIL;
-    }
-
-    if (buf == '0') {
-        /* Handler can be unregistered using the uri string */
-        ESP_LOGI(TAG, "Unregistering /hello and /echo URIs");
-        httpd_unregister_uri(req->handle, "/hello");
-        httpd_unregister_uri(req->handle, "/echo");
-    }
-    else {
-        ESP_LOGI(TAG, "Registering /hello and /echo URIs");
-        httpd_register_uri_handler(req->handle, &hello);
-        httpd_register_uri_handler(req->handle, &echo);
-    }
-
-    /* Respond with empty body */
-    httpd_resp_send(req, NULL, 0);
-    return ESP_OK;
-}
-
-httpd_uri_t ctrl = {
-    .uri       = "/ctrl",
-    .method    = HTTP_PUT,
-    .handler   = ctrl_put_handler,
-    .user_ctx  = NULL
-};
 
 httpd_handle_t start_webserver(void)
 {
@@ -256,7 +312,7 @@ httpd_handle_t start_webserver(void)
         ESP_LOGI(TAG, "Registering URI handlers");
         httpd_register_uri_handler(server, &hello);
         httpd_register_uri_handler(server, &echo);
-        httpd_register_uri_handler(server, &ctrl);
+        //httpd_register_uri_handler(server, &ctrl);
         return server;
     }
 
@@ -338,4 +394,6 @@ void app_main()
 
     ESP_ERROR_CHECK(ret);
     initialise_wifi(&server);
+    xQueueReadings = xQueueCreate(10, sizeof(int));
+    xTaskCreate(&pwmControlTask, "pwmControlTask", 5000, NULL, 5, NULL);
 }

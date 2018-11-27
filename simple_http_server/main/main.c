@@ -48,7 +48,8 @@
 #define EXAMPLE_WIFI_SSID CONFIG_WIFI_SSID
 #define EXAMPLE_WIFI_PASS CONFIG_WIFI_PASSWORD
 
-static const char *TAG="APP";
+static const char *TAG  ="APP";
+static const char *TAG2 ="TASK";
 char *internetProtocol;
 cJSON *root;
 char *type = "sin";
@@ -281,7 +282,7 @@ esp_err_t echo_post_handler(httpd_req_t *req)
         ESP_LOGI(TAG, "=========== RECEIVED DATA ==========");
         ESP_LOGI(TAG, "%.*s", ret, buf);
         printf("\n%s\n", internetProtocol);
-        ESP_LOGI(TAG, "====================================");
+        ESP_LOGI(TAG2, "====================================");
 
     }
 

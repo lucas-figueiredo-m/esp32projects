@@ -148,7 +148,8 @@ void updateJSON(char *incoming)
 
     if(cJSON_IsNumber(newDuty))
     {
-        duty_cicle = atoi(cJSON_Print(newDuty));
+        duty_cicle = cJSON_GetObjectItemCaseSensitive(var, "duty_cicle")->valueint;
+        //duty_cicle = atoi(cJSON_Print(newDuty));
         if(xQueueReadings !=0)
         {
             if(xQueueSendToBack(xQueueReadings, &duty_cicle, portMAX_DELAY))

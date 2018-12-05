@@ -8,16 +8,21 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
-#include "driver/gpio.h"
-#include "sdkconfig.h"
-#include "driver/adc.h"
-#include "esp_adc_cal.h"
-#include "driver/ledc.h"
-#include "esp_err.h"
+#include "freertos/event_groups.h"
+#include "freertos/semphr.h"
 
+#include "driver/gpio.h"
+#include "driver/adc.h"
+#include "driver/ledc.h"
+
+#include "sdkconfig.h"
+
+#include "esp_adc_cal.h"
+#include "esp_err.h"
 #include <esp_wifi.h>
 #include <esp_event_loop.h>
 #include <esp_log.h>
@@ -43,7 +48,17 @@
 #define LEDC_HS_CH0_GPIO       (19)
 #define LEDC_HS_CH0_CHANNEL    LEDC_CHANNEL_0
 
-#define LEDC_TEST_CH_NUM       (6)
+#define LEDC_HS_CH1_GPIO       (18)
+#define LEDC_HS_CH1_CHANNEL    LEDC_CHANNEL_1
+
+#define LEDC_HS_CH2_GPIO       (5)
+#define LEDC_HS_CH2_CHANNEL    LEDC_CHANNEL_2
+
+#define LEDC_TEST_CH_NUM       (3)
+
+#define A1CHANNEL (1 << 3)
+#define B1CHANNEL (1 << 4)
+#define C1CHANNEL (1 << 5)
 
 #define EXAMPLE_WIFI_SSID CONFIG_WIFI_SSID
 #define EXAMPLE_WIFI_PASS CONFIG_WIFI_PASSWORD
@@ -62,9 +77,9 @@ uint32_t offset            = 0;
 int rise_time              = 0;
 
 
+QueueHandle_t xQueuePWM, xQueueChannel;
+EventGroupHandle_t channel_opt;
 
-
-QueueHandle_t xQueueReadings;
 
 ledc_timer_config_t ledc_timer = {
     .duty_resolution = LEDC_TIMER_11_BIT,  // resolution of PWM duty
@@ -77,26 +92,82 @@ ledc_timer_config_t ledc_timer = {
 ledc_channel_config_t ledc_channel[LEDC_TEST_CH_NUM] = {
     {
         .channel    = LEDC_HS_CH0_CHANNEL,
-        .duty       = 0,
+        .duty       = 1024,
         .gpio_num   = LEDC_HS_CH0_GPIO,
+        .speed_mode = LEDC_HS_MODE,
+        .timer_sel  = LEDC_HS_TIMER
+    },
+
+    {
+        .channel    = LEDC_HS_CH1_CHANNEL,
+        .duty       = 1024,
+        .gpio_num   = LEDC_HS_CH1_GPIO,
+        .speed_mode = LEDC_HS_MODE,
+        .timer_sel  = LEDC_HS_TIMER
+    },
+
+    {
+        .channel    = LEDC_HS_CH2_CHANNEL,
+        .duty       = 1024,
+        .gpio_num   = LEDC_HS_CH2_GPIO,
         .speed_mode = LEDC_HS_MODE,
         .timer_sel  = LEDC_HS_TIMER
     },
 
 }; // MAX DUTY = 4095
 
+void channelControlTask(void *pvParameter) {
+
+    EventBits_t waitingChannel, receivedChannel;
+    waitingChannel = (EventBits_t) pvParameter;
+    int chSet = 0;
+
+    while(1) {
+
+        receivedChannel = xEventGroupWaitBits(channel_opt, A1CHANNEL | B1CHANNEL | C1CHANNEL, pdTRUE, pdFALSE, portMAX_DELAY);
+
+        if(receivedChannel == A1CHANNEL){
+            chSet = 0;
+            ESP_LOGI(TAG2, "Enviando valores");
+        }
+
+        if(receivedChannel == B1CHANNEL) chSet = 1;
+
+        if(receivedChannel == C1CHANNEL) chSet = 2;
+
+        if(xQueueChannel != 0 && xQueuePWM != 0) {
+
+            if(xQueueSendToBack(xQueuePWM, &amplitude, portMAX_DELAY) & xQueueSendToBack(xQueueChannel, &chSet, portMAX_DELAY)) {
+                ESP_LOGI(TAG2, "New PMW valued %d set into channel '%s'", amplitude, channel );
+
+            }
+        }
+
+
+
+    }
+}
+
 void pwmControlTask(void *pvParameter) {
     //int ch;
     uint32_t json_duty = 0;
+    int json_channel = 0;
+
+    EventBits_t waitingChannel;
+    waitingChannel = (EventBits_t)pvParameter;
 
     ledc_timer_config(&ledc_timer);
-    ledc_channel_config(&ledc_channel[0]);
+
+    for (int i = 0; i < LEDC_TEST_CH_NUM; ++i) {
+        ledc_channel_config(&ledc_channel[i]);
+    }
+    
 
     while (1) {
-        if(xQueueReceive(xQueueReadings, &json_duty, portMAX_DELAY)) {
+        if(xQueueReceive(xQueuePWM, &json_duty, portMAX_DELAY) & xQueueReceive(xQueueChannel, &json_channel, portMAX_DELAY)) {
             printf("\nReading Successfull. New PWM: %d", json_duty);
-            ledc_set_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel, json_duty);
-            ledc_update_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel);
+            ledc_set_duty(ledc_channel[json_channel].speed_mode, ledc_channel[json_channel].channel, json_duty);
+            ledc_update_duty(ledc_channel[json_channel].speed_mode, ledc_channel[json_channel].channel);
         }
     }
 }
@@ -135,6 +206,8 @@ void removeChar(char *str, char garbage) {
 
 void updateJSON(char *incoming) {
 
+    EventBits_t canal;
+
     cJSON *var          = cJSON_Parse(incoming);
     cJSON *newChannel   = NULL;
     cJSON *newType      = NULL;
@@ -143,12 +216,12 @@ void updateJSON(char *incoming) {
     newChannel  = cJSON_GetObjectItemCaseSensitive(var, "channel");
     newType     = cJSON_GetObjectItemCaseSensitive(var, "type");
 
-    frequency = cJSON_GetObjectItemCaseSensitive(var, "frequency")->valueint;
-    amplitude = cJSON_GetObjectItemCaseSensitive(var, "amplitude")->valueint;
-    i_max     = cJSON_GetObjectItemCaseSensitive(var, "i_max")->valueint;
-    phase     = cJSON_GetObjectItemCaseSensitive(var, "phase")->valueint;
-    offset    = cJSON_GetObjectItemCaseSensitive(var, "offset")->valueint;
-    rise_time = cJSON_GetObjectItemCaseSensitive(var, "rise_time")->valueint;
+    frequency   = cJSON_GetObjectItemCaseSensitive(var, "frequency")->valueint;
+    amplitude   = cJSON_GetObjectItemCaseSensitive(var, "amplitude")->valueint;
+    i_max       = cJSON_GetObjectItemCaseSensitive(var, "i_max")->valueint;
+    phase       = cJSON_GetObjectItemCaseSensitive(var, "phase")->valueint;
+    offset      = cJSON_GetObjectItemCaseSensitive(var, "offset")->valueint;
+    rise_time   = cJSON_GetObjectItemCaseSensitive(var, "rise_time")->valueint;
 
 
     if(cJSON_IsString(newChannel)) {
@@ -158,25 +231,34 @@ void updateJSON(char *incoming) {
         printf("channel: %s\n",channel);  // TEM QUE REMOVER AS ASPAS
     }
 
-    //amplitude = atoi(cJSON_Print(newAmplitude));
-    if(xQueueReadings !=0)
-    {
-        if(xQueueSendToBack(xQueueReadings, &amplitude, portMAX_DELAY))
-        {
-            printf("\nValue posted\n");
-        }
+    if(strcmp(channel,"A1") == 0) {
+        canal = xEventGroupSetBits(channel_opt, A1CHANNEL);
+        ESP_LOGI(TAG, "Configurando canal A1 ...");
+    }
 
-        else
-        {
+    else if(strcmp(channel,"B1") == 0) {
+        canal = xEventGroupSetBits(channel_opt, B1CHANNEL);
+        ESP_LOGI(TAG, "Configurando canal B1 ...");
+    }
+
+    else if(strcmp(channel,"C1") == 0) {
+        canal = xEventGroupSetBits(channel_opt, C1CHANNEL);
+        ESP_LOGI(TAG, "Configurando canal C1 ...");
+    }
+/*
+    //amplitude = atoi(cJSON_Print(newAmplitude));
+    if(xQueuePWM !=0) {
+        if(xQueueSendToBack(xQueuePWM, &amplitude, portMAX_DELAY)) {
+            printf("\nValue posted\n");
+        } else {
             printf("\nFailed to post value\n");
         }
-    }
+    }*/
 }
 
 
 /* An HTTP GET handler */
-esp_err_t hello_get_handler(httpd_req_t *req)
-{
+esp_err_t hello_get_handler(httpd_req_t *req) {
     char*  buf;
     size_t buf_len;
 
@@ -261,8 +343,7 @@ httpd_uri_t hello = {
 };
 
 /* An HTTP POST handler */
-esp_err_t echo_post_handler(httpd_req_t *req)
-{
+esp_err_t setParameters_post_handler(httpd_req_t *req) {
     char buf[400];
     int ret, remaining = req->content_len;
     httpd_resp_set_type(req, HTTPD_TYPE_JSON);
@@ -297,16 +378,15 @@ esp_err_t echo_post_handler(httpd_req_t *req)
     return ESP_OK;
 }
 
-httpd_uri_t echo = {
-    .uri       = "/echo",
+httpd_uri_t setParameters = {
+    .uri       = "/setParameters",
     .method    = HTTP_POST,
-    .handler   = echo_post_handler,
+    .handler   = setParameters_post_handler,
     .user_ctx  = NULL
 };
 
 
-httpd_handle_t start_webserver(void)
-{
+httpd_handle_t start_webserver(void) {
     httpd_handle_t server = NULL;
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
 
@@ -316,7 +396,7 @@ httpd_handle_t start_webserver(void)
         // Set URI handlers
         ESP_LOGI(TAG, "Registering URI handlers");
         httpd_register_uri_handler(server, &hello);
-        httpd_register_uri_handler(server, &echo);
+        httpd_register_uri_handler(server, &setParameters);
         //httpd_register_uri_handler(server, &ctrl);
         return server;
     }
@@ -325,14 +405,12 @@ httpd_handle_t start_webserver(void)
     return NULL;
 }
 
-void stop_webserver(httpd_handle_t server)
-{
+void stop_webserver(httpd_handle_t server) {
     // Stop the httpd server
     httpd_stop(server);
 }
 
-static esp_err_t event_handler(void *ctx, system_event_t *event)
-{
+static esp_err_t event_handler(void *ctx, system_event_t *event) {
     httpd_handle_t *server = (httpd_handle_t *) ctx;
 
     switch(event->event_id) {
@@ -367,8 +445,7 @@ static esp_err_t event_handler(void *ctx, system_event_t *event)
     return ESP_OK;
 }
 
-static void initialise_wifi(void *arg)
-{
+static void initialise_wifi(void *arg) {
     tcpip_adapter_init();
     ESP_ERROR_CHECK(esp_event_loop_init(event_handler, arg));
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
@@ -386,19 +463,21 @@ static void initialise_wifi(void *arg)
     ESP_ERROR_CHECK(esp_wifi_start());
 }
 
-void app_main()
-{
+void app_main() {
     static httpd_handle_t server = NULL;
     //ESP_ERROR_CHECK(nvs_flash_init());
     esp_err_t ret = nvs_flash_init();
-    if(ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
-    {
+    if(ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
     }
 
+    channel_opt = xEventGroupCreate();
+
     ESP_ERROR_CHECK(ret);
     initialise_wifi(&server);
-    xQueueReadings = xQueueCreate(10, sizeof(int));
+    xQueuePWM     = xQueueCreate(10, sizeof(int));
+    xQueueChannel = xQueueCreate(10, sizeof(int));
     xTaskCreate(&pwmControlTask, "pwmControlTask", 5000, NULL, 5, NULL);
+    xTaskCreate(&channelControlTask, "channelControlTask", 5000, NULL, 6, NULL);
 }

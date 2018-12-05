@@ -79,9 +79,13 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/newlib/include/limits.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/list.h \
  /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/event_groups.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/timers.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/task.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/semphr.h \
+ /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/driver/include/driver/adc.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
- /opt/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
  /opt/esp/esp-idf/components/driver/include/driver/ledc.h \
  /opt/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
@@ -89,6 +93,7 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/esp32/include/esp_dport_access.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
+ /opt/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h \
  /opt/esp/esp-idf/components/esp32/include/esp_wifi.h \
  /opt/esp/esp-idf/components/esp32/include/rom/queue.h \
  /opt/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
@@ -121,8 +126,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
  /opt/esp/esp-idf/components/newlib/include/errno.h \
  /opt/esp/esp-idf/components/newlib/include/sys/errno.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/semphr.h \
- /opt/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h \
  /opt/esp/esp-idf/components/newlib/include/inttypes.h \
  /opt/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
@@ -306,11 +309,19 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 
 /opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
+/opt/esp/esp-idf/components/freertos/include/freertos/event_groups.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/timers.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/task.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/semphr.h:
+
+/opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
+
 /opt/esp/esp-idf/components/driver/include/driver/adc.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
-
-/opt/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
 
 /opt/esp/esp-idf/components/driver/include/driver/ledc.h:
 
@@ -325,6 +336,8 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 /opt/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h:
 
 /opt/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
+
+/opt/esp/esp-idf/components/esp_adc_cal/include/esp_adc_cal.h:
 
 /opt/esp/esp-idf/components/esp32/include/esp_wifi.h:
 
@@ -389,10 +402,6 @@ main.o: /opt/esp/esp32projects/simple_http_server/main/main.c \
 /opt/esp/esp-idf/components/newlib/include/sys/errno.h:
 
 /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/sys_arch.h:
-
-/opt/esp/esp-idf/components/freertos/include/freertos/semphr.h:
-
-/opt/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
 /opt/esp/esp-idf/components/lwip/port/esp32/include/arch/vfs_lwip.h:
 

@@ -52,23 +52,29 @@ static const char *TAG  ="APP";
 static const char *TAG2 ="TASK";
 char *internetProtocol;
 cJSON *root;
-char *type = "sin";
-int duty_cicle = 60;
-int amplitude = 100;
+char *channel              = "A1";
+char *type                 = "cc";
+int frequency              = 0;
+uint32_t amplitude         = 0;
+uint32_t i_max             = 0;
+int phase                  = 0;
+uint32_t offset            = 0;
+int rise_time              = 0;
+
+
+
 
 QueueHandle_t xQueueReadings;
 
-ledc_timer_config_t ledc_timer = 
-{
+ledc_timer_config_t ledc_timer = {
     .duty_resolution = LEDC_TIMER_11_BIT,  // resolution of PWM duty
-    .freq_hz = 38000,                      // duty_cicle of PWM signal
+    .freq_hz = 38000,                      // amplitude of PWM signal
     .speed_mode = LEDC_HS_MODE,            // timer mode
     .timer_num = LEDC_HS_TIMER             // timer index
 };
     // Set configuration of timer0 for high speed channels
 
-ledc_channel_config_t ledc_channel[LEDC_TEST_CH_NUM] = 
-{
+ledc_channel_config_t ledc_channel[LEDC_TEST_CH_NUM] = {
     {
         .channel    = LEDC_HS_CH0_CHANNEL,
         .duty       = 0,
@@ -79,18 +85,15 @@ ledc_channel_config_t ledc_channel[LEDC_TEST_CH_NUM] =
 
 }; // MAX DUTY = 4095
 
-void pwmControlTask(void *pvParameter)
-{
+void pwmControlTask(void *pvParameter) {
     //int ch;
     uint32_t json_duty = 0;
 
     ledc_timer_config(&ledc_timer);
     ledc_channel_config(&ledc_channel[0]);
 
-    while (1) 
-    {
-        if(xQueueReceive(xQueueReadings, &json_duty, portMAX_DELAY))
-        {
+    while (1) {
+        if(xQueueReceive(xQueueReadings, &json_duty, portMAX_DELAY)) {
             printf("\nReading Successfull. New PWM: %d", json_duty);
             ledc_set_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel, json_duty);
             ledc_update_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel);
@@ -98,28 +101,31 @@ void pwmControlTask(void *pvParameter)
     }
 }
 
-char *jsonToString()
-{
+char *jsonToString() {
 	char *rendered;
 
 	root = cJSON_CreateObject();
 
 	//cJSON_AddItemToObject(root, "name", cJSON_CreateString("example"));
 	//cJSON_AddItemToObject(root , "format", fmt = cJSON_CreateObject());
-	cJSON_AddStringToObject(root, "type", type);
-    cJSON_AddNumberToObject(root, "duty_cicle", duty_cicle);
+	cJSON_AddStringToObject(root, "channel", channel);
+    cJSON_AddStringToObject(root, "type", type);
+    cJSON_AddNumberToObject(root, "frequency", frequency);
     cJSON_AddNumberToObject(root, "amplitude", amplitude);
+    cJSON_AddNumberToObject(root, "i_max", i_max);
+    cJSON_AddNumberToObject(root, "phase", phase);
+    cJSON_AddNumberToObject(root, "offset", offset);
+    cJSON_AddNumberToObject(root, "rise_time", rise_time);
+    
 	rendered = cJSON_Print(root);
 
 	return rendered;
 }
 
-void removeChar(char *str, char garbage) 
-{
+void removeChar(char *str, char garbage) {
 
     char *src, *dst;
-    for (src = dst = str; *src != '\0'; src++) 
-    {
+    for (src = dst = str; *src != '\0'; src++) {
         *dst = *src;
         if (*dst != garbage) dst++;
     }
@@ -127,46 +133,43 @@ void removeChar(char *str, char garbage)
 }
 
 
-void updateJSON(char *incoming)
-{
-    cJSON *var     = cJSON_Parse(incoming);
-    cJSON *newTyp  = NULL;
-    cJSON *newDuty = NULL;
-    cJSON *newAmpl = NULL;
+void updateJSON(char *incoming) {
 
-    newTyp  = cJSON_GetObjectItemCaseSensitive(var, "type");
-    newDuty = cJSON_GetObjectItemCaseSensitive(var, "duty_cicle");
-    newAmpl = cJSON_GetObjectItemCaseSensitive(var, "amplitude");
+    cJSON *var          = cJSON_Parse(incoming);
+    cJSON *newChannel   = NULL;
+    cJSON *newType      = NULL;
+    
 
-    if(cJSON_IsString(newTyp))
-    {
-        type = cJSON_Print(newTyp);
-        removeChar(type,'/');
-        removeChar(type,'"');
-        printf("Type: %s\n",type);  // TEM QUE REMOVER AS ASPAS
+    newChannel  = cJSON_GetObjectItemCaseSensitive(var, "channel");
+    newType     = cJSON_GetObjectItemCaseSensitive(var, "type");
+
+    frequency = cJSON_GetObjectItemCaseSensitive(var, "frequency")->valueint;
+    amplitude = cJSON_GetObjectItemCaseSensitive(var, "amplitude")->valueint;
+    i_max     = cJSON_GetObjectItemCaseSensitive(var, "i_max")->valueint;
+    phase     = cJSON_GetObjectItemCaseSensitive(var, "phase")->valueint;
+    offset    = cJSON_GetObjectItemCaseSensitive(var, "offset")->valueint;
+    rise_time = cJSON_GetObjectItemCaseSensitive(var, "rise_time")->valueint;
+
+
+    if(cJSON_IsString(newChannel)) {
+        channel = cJSON_Print(newChannel);
+        removeChar(channel,'/');
+        removeChar(channel,'"');
+        printf("channel: %s\n",channel);  // TEM QUE REMOVER AS ASPAS
     }
 
-    if(cJSON_IsNumber(newDuty))
+    //amplitude = atoi(cJSON_Print(newAmplitude));
+    if(xQueueReadings !=0)
     {
-        duty_cicle = cJSON_GetObjectItemCaseSensitive(var, "duty_cicle")->valueint;
-        //duty_cicle = atoi(cJSON_Print(newDuty));
-        if(xQueueReadings !=0)
+        if(xQueueSendToBack(xQueueReadings, &amplitude, portMAX_DELAY))
         {
-            if(xQueueSendToBack(xQueueReadings, &duty_cicle, portMAX_DELAY))
-            {
-                printf("\nValue posted\n");
-            }
-
-            else
-            {
-                printf("\nFailed to post value\n");
-            }
+            printf("\nValue posted\n");
         }
-    }
 
-    if(cJSON_IsNumber(newAmpl))
-    {
-        amplitude = atoi(cJSON_Print(newAmpl));
+        else
+        {
+            printf("\nFailed to post value\n");
+        }
     }
 }
 
@@ -260,7 +263,7 @@ httpd_uri_t hello = {
 /* An HTTP POST handler */
 esp_err_t echo_post_handler(httpd_req_t *req)
 {
-    char buf[100];
+    char buf[400];
     int ret, remaining = req->content_len;
     httpd_resp_set_type(req, HTTPD_TYPE_JSON);
 

@@ -63,8 +63,19 @@
 #define EXAMPLE_WIFI_SSID CONFIG_WIFI_SSID
 #define EXAMPLE_WIFI_PASS CONFIG_WIFI_PASSWORD
 
+#define DEFAULT_VREF    1300
+#define NO_OF_SAMPLES   64
+#define adcResolution          ADC_WIDTH_BIT_11
+
+static esp_adc_cal_characteristics_t *adc_chars;
+static const adc_channel_t adc1_channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
+static const adc_atten_t atten = ADC_ATTEN_DB_11;//at = 0
+static const adc_unit_t unit = ADC_UNIT_1;
+
 static const char *TAG  ="APP";
 static const char *TAG2 ="TASK";
+
+
 char *internetProtocol;
 cJSON *root;
 char *channel              = "A1";
@@ -142,9 +153,30 @@ void channelControlTask(void *pvParameter) {
 
             }
         }
+    }
+}
 
+void adcReadTask(void *pvParameter) {
 
+    adc1_config_width(adcResolution);
+    adc1_config_channel_atten(adc1_channel, atten);
 
+    //Characterize ADC
+    adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
+    esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, adcResolution, DEFAULT_VREF, adc_chars);
+
+    //Continuously sample ADC1
+    while (1) {
+
+        uint32_t adc_reading = 0;
+        //Multisampling
+        for (int i = 0; i < NO_OF_SAMPLES; i++)
+            adc_reading += adc1_get_raw((adc1_channel_t)adc1_channel);
+
+        adc_reading /= NO_OF_SAMPLES;
+        
+        printf("Raw: %d\n", adc_reading);
+        vTaskDelay(50/portTICK_PERIOD_MS);
     }
 }
 
@@ -177,8 +209,6 @@ char *jsonToString() {
 
 	root = cJSON_CreateObject();
 
-	//cJSON_AddItemToObject(root, "name", cJSON_CreateString("example"));
-	//cJSON_AddItemToObject(root , "format", fmt = cJSON_CreateObject());
 	cJSON_AddStringToObject(root, "channel", channel);
     cJSON_AddStringToObject(root, "type", type);
     cJSON_AddNumberToObject(root, "frequency", frequency);
@@ -480,4 +510,5 @@ void app_main() {
     xQueueChannel = xQueueCreate(10, sizeof(int));
     xTaskCreate(&pwmControlTask, "pwmControlTask", 5000, NULL, 5, NULL);
     xTaskCreate(&channelControlTask, "channelControlTask", 5000, NULL, 6, NULL);
+    xTaskCreate(&adcReadTask, "adcReadTask", 5000, NULL, 7, NULL);
 }

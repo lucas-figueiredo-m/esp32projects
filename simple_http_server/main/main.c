@@ -56,9 +56,10 @@
 
 #define LEDC_TEST_CH_NUM       (3)
 
-#define A1CHANNEL (1 << 3)
-#define B1CHANNEL (1 << 4)
-#define C1CHANNEL (1 << 5)
+#define A1CHANNEL (1 << 0)
+#define B1CHANNEL (1 << 1)
+#define C1CHANNEL (1 << 2)
+#define OVERCURRENT (1 << 3)
 
 #define EXAMPLE_WIFI_SSID CONFIG_WIFI_SSID
 #define EXAMPLE_WIFI_PASS CONFIG_WIFI_PASSWORD
@@ -68,7 +69,9 @@
 #define adcResolution          ADC_WIDTH_BIT_11
 
 static esp_adc_cal_characteristics_t *adc_chars;
-static const adc_channel_t adc1_channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
+static const adc_channel_t adcA1_channel = ADC_CHANNEL_6;     //GPIO34 if ADC1, GPIO14 if ADC2
+static const adc_channel_t adcB1_channel = ADC_CHANNEL_7;     //GPIO35
+static const adc_channel_t adcC1_channel = ADC_CHANNEL_4;     //GPIO32
 static const adc_atten_t atten = ADC_ATTEN_DB_11;//at = 0
 static const adc_unit_t unit = ADC_UNIT_1;
 
@@ -77,15 +80,22 @@ static const char *TAG2 ="TASK";
 
 
 char *internetProtocol;
-cJSON *root;
+cJSON *postJSON, *getJSON;
 char *channel              = "A1";
 char *type                 = "cc";
 int frequency              = 0;
-uint32_t amplitude         = 0;
-uint32_t i_max             = 0;
+uint32_t amplitude         = 1024;
+uint32_t i_max             = 1024;
 int phase                  = 0;
 uint32_t offset            = 0;
 int rise_time              = 0;
+
+uint32_t current           = 0;
+uint32_t voltage           = 0;
+
+uint32_t adc_A1 = 0;
+uint32_t adc_B1 = 0;
+uint32_t adc_C1 = 0;
 
 
 QueueHandle_t xQueuePWM, xQueueChannel;
@@ -127,6 +137,9 @@ ledc_channel_config_t ledc_channel[LEDC_TEST_CH_NUM] = {
 
 }; // MAX DUTY = 4095
 
+/*-------------------------------------------------------------*/
+/*--------------------------- TASKS ---------------------------*/
+/*-------------------------------------------------------------*/
 void channelControlTask(void *pvParameter) {
 
     EventBits_t waitingChannel, receivedChannel;
@@ -137,10 +150,7 @@ void channelControlTask(void *pvParameter) {
 
         receivedChannel = xEventGroupWaitBits(channel_opt, A1CHANNEL | B1CHANNEL | C1CHANNEL, pdTRUE, pdFALSE, portMAX_DELAY);
 
-        if(receivedChannel == A1CHANNEL){
-            chSet = 0;
-            ESP_LOGI(TAG2, "Enviando valores");
-        }
+        if(receivedChannel == A1CHANNEL) chSet = 0;
 
         if(receivedChannel == B1CHANNEL) chSet = 1;
 
@@ -156,10 +166,10 @@ void channelControlTask(void *pvParameter) {
     }
 }
 
-void adcReadTask(void *pvParameter) {
+void adcReadTaskA1(void *pvParameter) {
 
     adc1_config_width(adcResolution);
-    adc1_config_channel_atten(adc1_channel, atten);
+    adc1_config_channel_atten(adcA1_channel, atten);
 
     //Characterize ADC
     adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
@@ -167,15 +177,54 @@ void adcReadTask(void *pvParameter) {
 
     //Continuously sample ADC1
     while (1) {
-
-        uint32_t adc_reading = 0;
         //Multisampling
         for (int i = 0; i < NO_OF_SAMPLES; i++)
-            adc_reading += adc1_get_raw((adc1_channel_t)adc1_channel);
+            adc_A1 += adc1_get_raw((adc_channel_t)adcA1_channel);
 
-        adc_reading /= NO_OF_SAMPLES;
+        adc_A1 /= NO_OF_SAMPLES;
+
+        vTaskDelay(50/portTICK_PERIOD_MS);
+    }
+}
+
+void adcReadTaskB1(void *pvParameter) {
+
+    adc1_config_width(adcResolution);
+    adc1_config_channel_atten(adcB1_channel, atten);
+
+    //Characterize ADC
+    adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
+    esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, adcResolution, DEFAULT_VREF, adc_chars);
+
+    //Continuously sample ADC1
+    while (1) {
+        //Multisampling
+        for (int i = 0; i < NO_OF_SAMPLES; i++)
+            adc_B1 += adc1_get_raw((adc_channel_t)adcB1_channel);
+
+        adc_B1 /= NO_OF_SAMPLES;
         
-        printf("Raw: %d\n", adc_reading);
+        vTaskDelay(50/portTICK_PERIOD_MS);
+    }
+}
+
+void adcReadTaskC1(void *pvParameter) {
+
+    adc1_config_width(adcResolution);
+    adc1_config_channel_atten(adcC1_channel, atten);
+
+    //Characterize ADC
+    adc_chars = calloc(1, sizeof(esp_adc_cal_characteristics_t));
+    esp_adc_cal_value_t val_type = esp_adc_cal_characterize(unit, atten, adcResolution, DEFAULT_VREF, adc_chars);
+
+    //Continuously sample ADC1
+    while (1) {
+        //Multisampling
+        for (int i = 0; i < NO_OF_SAMPLES; i++)
+            adc_C1 += adc1_get_raw((adc_channel_t)adcC1_channel);
+
+        adc_C1 /= NO_OF_SAMPLES;
+        
         vTaskDelay(50/portTICK_PERIOD_MS);
     }
 }
@@ -204,23 +253,39 @@ void pwmControlTask(void *pvParameter) {
     }
 }
 
-char *jsonToString() {
-	char *rendered;
+/*-------------------------------------------------------------*/
+/*--------------------------- TASKS ---------------------------*/
+/*-------------------------------------------------------------*/
 
-	root = cJSON_CreateObject();
+/*-------------------------------------------------------------*/
+/*------------------------- FUNCTIONS -------------------------*/
+/*-------------------------------------------------------------*/
 
-	cJSON_AddStringToObject(root, "channel", channel);
-    cJSON_AddStringToObject(root, "type", type);
-    cJSON_AddNumberToObject(root, "frequency", frequency);
-    cJSON_AddNumberToObject(root, "amplitude", amplitude);
-    cJSON_AddNumberToObject(root, "i_max", i_max);
-    cJSON_AddNumberToObject(root, "phase", phase);
-    cJSON_AddNumberToObject(root, "offset", offset);
-    cJSON_AddNumberToObject(root, "rise_time", rise_time);
-    
-	rendered = cJSON_Print(root);
+char *createGetJSON(uint32_t v, uint32_t i) {
 
-	return rendered;
+    char *rendered;
+
+    getJSON = cJSON_CreateObject();
+
+    cJSON_AddNumberToObject(getJSON, "voltage", v);
+    cJSON_AddNumberToObject(getJSON, "current", i);
+
+    rendered = cJSON_Print(getJSON);
+
+    return rendered;
+}
+
+void createPostJSON() {
+	postJSON = cJSON_CreateObject();
+
+	cJSON_AddStringToObject(postJSON, "channel", channel);
+    cJSON_AddStringToObject(postJSON, "type", type);
+    cJSON_AddNumberToObject(postJSON, "frequency", frequency);
+    cJSON_AddNumberToObject(postJSON, "amplitude", amplitude);
+    cJSON_AddNumberToObject(postJSON, "i_max", i_max);
+    cJSON_AddNumberToObject(postJSON, "phase", phase);
+    cJSON_AddNumberToObject(postJSON, "offset", offset);
+    cJSON_AddNumberToObject(postJSON, "rise_time", rise_time);
 }
 
 void removeChar(char *str, char garbage) {
@@ -275,98 +340,123 @@ void updateJSON(char *incoming) {
         canal = xEventGroupSetBits(channel_opt, C1CHANNEL);
         ESP_LOGI(TAG, "Configurando canal C1 ...");
     }
-/*
-    //amplitude = atoi(cJSON_Print(newAmplitude));
-    if(xQueuePWM !=0) {
-        if(xQueueSendToBack(xQueuePWM, &amplitude, portMAX_DELAY)) {
-            printf("\nValue posted\n");
-        } else {
-            printf("\nFailed to post value\n");
-        }
-    }*/
 }
+
+/*-------------------------------------------------------------*/
+/*------------------------- FUNCTIONS -------------------------*/
+/*-------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------*/
+/*----------------------- HTTP HANDLERS -----------------------*/
+/*-------------------------------------------------------------*/
 
 
 /* An HTTP GET handler */
-esp_err_t hello_get_handler(httpd_req_t *req) {
+/* Get header value string length and allocate memory for length + 1, 
+ * extra byte for null termination: buf_len = httpd_req_get_hdr_value_len(req, "Host") + 1; */
+/* Copy null terminated value string into buffer and test it: httpd_req_get_hdr_value_str(req, "Host", buf, buf_len) == ESP_OK) */
+/* Send response with custom headers and body set as the
+ * string passed in user context: httpd_resp_send(req, resp_str, strlen(resp_str));*/
+/* After sending the HTTP response the old HTTP request
+ * headers are lost. Check if HTTP request headers can be read now: httpd_req_get_hdr_value_len(req, "Host") == 0*/
+esp_err_t getInfoA1_get_handler(httpd_req_t *req) {
     char*  buf;
     size_t buf_len;
-
     httpd_resp_set_type(req, HTTPD_TYPE_JSON);
-
-    /* Get header value string length and allocate memory for length + 1,
-     * extra byte for null termination */
     buf_len = httpd_req_get_hdr_value_len(req, "Host") + 1;
+
     if (buf_len > 1) {
         buf = malloc(buf_len);
-        /* Copy null terminated value string into buffer */
         if (httpd_req_get_hdr_value_str(req, "Host", buf, buf_len) == ESP_OK) {
             ESP_LOGI(TAG, "Found header => Host: %s", buf);
         }
         free(buf);
     }
 
-    buf_len = httpd_req_get_hdr_value_len(req, "Test-Header-2") + 1;
-    if (buf_len > 1) {
-        buf = malloc(buf_len);
-        if (httpd_req_get_hdr_value_str(req, "Test-Header-2", buf, buf_len) == ESP_OK) {
-            ESP_LOGI(TAG, "Found header => Test-Header-2: %s", buf);
-        }
-        free(buf);
-    }
+    uint32_t voltage = ledc_get_duty(ledc_channel[0].speed_mode, ledc_channel[0].channel);
 
-    buf_len = httpd_req_get_hdr_value_len(req, "Test-Header-1") + 1;
-    if (buf_len > 1) {
-        buf = malloc(buf_len);
-        if (httpd_req_get_hdr_value_str(req, "Test-Header-1", buf, buf_len) == ESP_OK) {
-            ESP_LOGI(TAG, "Found header => Test-Header-1: %s", buf);
-        }
-        free(buf);
-    }
-
-    /* Read URL query string length and allocate memory for length + 1,
-     * extra byte for null termination */
-    buf_len = httpd_req_get_url_query_len(req) + 1;
-    if (buf_len > 1) {
-        buf = malloc(buf_len);
-        if (httpd_req_get_url_query_str(req, buf, buf_len) == ESP_OK) {
-            ESP_LOGI(TAG, "Found URL query => %s", buf);
-            char param[32];
-            /* Get value of expected key from query string */
-            if (httpd_query_key_value(buf, "query1", param, sizeof(param)) == ESP_OK) {
-                ESP_LOGI(TAG, "Found URL query parameter => query1=%s", param);
-            }
-            if (httpd_query_key_value(buf, "query3", param, sizeof(param)) == ESP_OK) {
-                ESP_LOGI(TAG, "Found URL query parameter => query3=%s", param);
-            }
-            if (httpd_query_key_value(buf, "query2", param, sizeof(param)) == ESP_OK) {
-                ESP_LOGI(TAG, "Found URL query parameter => query2=%s", param);
-            }
-        }
-        free(buf);
-    }
-
-    /* Set some custom headers */
-    httpd_resp_set_hdr(req, "Custom-Header-1", "Custom-Value-1");
-    httpd_resp_set_hdr(req, "Custom-Header-2", "Custom-Value-2");
-
-    /* Send response with custom headers and body set as the
-     * string passed in user context*/
-    const char* resp_str = jsonToString();//(const char*) req->user_ctx;
+    const char* resp_str = createGetJSON(voltage, adc_A1);
     httpd_resp_send(req, resp_str, strlen(resp_str));
 
-    /* After sending the HTTP response the old HTTP request
-     * headers are lost. Check if HTTP request headers can be read now. */
     if (httpd_req_get_hdr_value_len(req, "Host") == 0) {
         ESP_LOGI(TAG, "Request headers lost");
     }
     return ESP_OK;
 }
 
-httpd_uri_t hello = {
-    .uri       = "/hello",
+httpd_uri_t getInfoA1 = {
+    .uri       = "/getInfoA1",
     .method    = HTTP_GET,
-    .handler   = hello_get_handler,
+    .handler   = getInfoA1_get_handler,
+    /* Let's pass response string in user
+     * context to demonstrate it's usage */
+    .user_ctx  = NULL
+};
+
+esp_err_t getInfoB1_get_handler(httpd_req_t *req) {
+    char*  buf;
+    size_t buf_len;
+    httpd_resp_set_type(req, HTTPD_TYPE_JSON);
+    buf_len = httpd_req_get_hdr_value_len(req, "Host") + 1;
+    
+    if (buf_len > 1) {
+        buf = malloc(buf_len);
+        if (httpd_req_get_hdr_value_str(req, "Host", buf, buf_len) == ESP_OK) {
+            ESP_LOGI(TAG, "Found header => Host: %s", buf);
+        }
+        free(buf);
+    }
+
+    uint32_t voltage = ledc_get_duty(ledc_channel[1].speed_mode, ledc_channel[1].channel);
+
+    const char* resp_str = createGetJSON(voltage, adc_B1);
+    httpd_resp_send(req, resp_str, strlen(resp_str));
+
+    if (httpd_req_get_hdr_value_len(req, "Host") == 0) {
+        ESP_LOGI(TAG, "Request headers lost");
+    }
+    return ESP_OK;
+}
+
+httpd_uri_t getInfoB1 = {
+    .uri       = "/getInfoB1",
+    .method    = HTTP_GET,
+    .handler   = getInfoB1_get_handler,
+    /* Let's pass response string in user
+     * context to demonstrate it's usage */
+    .user_ctx  = NULL
+};
+
+esp_err_t getInfoC1_get_handler(httpd_req_t *req) {
+    char*  buf;
+    size_t buf_len;
+    httpd_resp_set_type(req, HTTPD_TYPE_JSON);
+    buf_len = httpd_req_get_hdr_value_len(req, "Host") + 1;
+    
+    if (buf_len > 1) {
+        buf = malloc(buf_len);
+        if (httpd_req_get_hdr_value_str(req, "Host", buf, buf_len) == ESP_OK) {
+            ESP_LOGI(TAG, "Found header => Host: %s", buf);
+        }
+        free(buf);
+    }
+
+    uint32_t voltage = ledc_get_duty(ledc_channel[2].speed_mode, ledc_channel[2].channel);
+
+    const char* resp_str = createGetJSON(voltage, adc_C1);
+    httpd_resp_send(req, resp_str, strlen(resp_str));
+
+    if (httpd_req_get_hdr_value_len(req, "Host") == 0) {
+        ESP_LOGI(TAG, "Request headers lost");
+    }
+    return ESP_OK;
+}
+
+httpd_uri_t getInfoC1 = {
+    .uri       = "/getInfoC1",
+    .method    = HTTP_GET,
+    .handler   = getInfoC1_get_handler,
     /* Let's pass response string in user
      * context to demonstrate it's usage */
     .user_ctx  = NULL
@@ -396,8 +486,8 @@ esp_err_t setParameters_post_handler(httpd_req_t *req) {
         /* Log data received */
         ESP_LOGI(TAG, "=========== RECEIVED DATA ==========");
         ESP_LOGI(TAG, "%.*s", ret, buf);
+        ESP_LOGI(TAG, "====================================");
         printf("\n%s\n", internetProtocol);
-        ESP_LOGI(TAG2, "====================================");
 
     }
 
@@ -415,7 +505,6 @@ httpd_uri_t setParameters = {
     .user_ctx  = NULL
 };
 
-
 httpd_handle_t start_webserver(void) {
     httpd_handle_t server = NULL;
     httpd_config_t config = HTTPD_DEFAULT_CONFIG();
@@ -425,7 +514,9 @@ httpd_handle_t start_webserver(void) {
     if (httpd_start(&server, &config) == ESP_OK) {
         // Set URI handlers
         ESP_LOGI(TAG, "Registering URI handlers");
-        httpd_register_uri_handler(server, &hello);
+        httpd_register_uri_handler(server, &getInfoA1);
+        httpd_register_uri_handler(server, &getInfoB1);
+        httpd_register_uri_handler(server, &getInfoC1);
         httpd_register_uri_handler(server, &setParameters);
         //httpd_register_uri_handler(server, &ctrl);
         return server;
@@ -439,6 +530,10 @@ void stop_webserver(httpd_handle_t server) {
     // Stop the httpd server
     httpd_stop(server);
 }
+
+/*-------------------------------------------------------------*/
+/*----------------------- HTTP HANDLERS -----------------------*/
+/*-------------------------------------------------------------*/
 
 static esp_err_t event_handler(void *ctx, system_event_t *event) {
     httpd_handle_t *server = (httpd_handle_t *) ctx;
@@ -502,6 +597,7 @@ void app_main() {
         ret = nvs_flash_init();
     }
 
+    createPostJSON();
     channel_opt = xEventGroupCreate();
 
     ESP_ERROR_CHECK(ret);
@@ -510,5 +606,7 @@ void app_main() {
     xQueueChannel = xQueueCreate(10, sizeof(int));
     xTaskCreate(&pwmControlTask, "pwmControlTask", 5000, NULL, 5, NULL);
     xTaskCreate(&channelControlTask, "channelControlTask", 5000, NULL, 6, NULL);
-    xTaskCreate(&adcReadTask, "adcReadTask", 5000, NULL, 7, NULL);
+    xTaskCreate(&adcReadTaskA1, "adcReadTaskA1", 5000, NULL, 7, NULL);
+    xTaskCreate(&adcReadTaskB1, "adcReadTaskB1", 5000, NULL, 7, NULL);
+    xTaskCreate(&adcReadTaskC1, "adcReadTaskC1", 5000, NULL, 7, NULL);
 }
